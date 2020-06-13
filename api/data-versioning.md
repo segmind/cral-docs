@@ -2,7 +2,7 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-13T14:58:15.173Z
+date: 2020-06-13T15:04:57.697Z
 tags: 
 editor: markdown
 ---
@@ -18,10 +18,8 @@ Parses the classification data and logs to tracking server
 cral.data_versioning.log_classification_dataset()
 ```
 **Arguments**
-| name                  | Type        | Default     | Description |
-|-----------------------|-------------|-------------|-------------|
-| scale/size            | 16          | 32          | 64          |
-|  209/256 = 0.81640625 | 13.0625     | 26.125      | 52.25       |
-|  9/16 = 0.5625        | 9           | 18          | 36          |
-|  310/256 =  1.2109375 | 19.375      | 38.75       | 77.5        |
-|  107/128 = 0.8359375  | 13.375      | 26.75       | 53.5        |
+| Name                  | Type        | Default     | Description                            |
+|-----------------------|-------------|-------------|----------------------------------------|
+| train_images_dir | string | . | path to images |
+|  val_images_dir | string | . | (*optional*) path to validation images  |
+|  split | float | 1          | (*optional*) fraction to divide training dataset into training and validation sets |
