@@ -2,7 +2,7 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-13T15:18:41.426Z
+date: 2020-06-13T15:23:25.469Z
 tags: 
 editor: markdown
 ---
@@ -33,6 +33,10 @@ cral.data_versioning.log_segmentation_dataset(*args, **kwargs)
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
-| **annotation_format** | string | . | coco pascal |
-|  **val_images_dir** | string | . | (*optional*) path to validation images  |
-|  **split** | float | 1          | (*optional*) fraction to divide training dataset into training and validation sets |
+| **annotation_format** | enum | coco | Options: `coco` `pascal` |
+|  **train_images_dir** | string | . | (*optional*) path to validation images  |
+|  **train_anno_dir** | float | 1          | (*optional*) fraction to divide training dataset into training and validation sets |
+| **img_to_anno** | 
+| **val_images_dir** |
+| **val_anno_dir** | 
+| **split** |
