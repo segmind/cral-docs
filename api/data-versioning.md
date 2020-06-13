@@ -2,7 +2,7 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-13T15:24:52.869Z
+date: 2020-06-13T15:26:18.585Z
 tags: 
 editor: markdown
 ---
@@ -23,6 +23,8 @@ cral.data_versioning.log_classification_dataset(*args, **kwargs)
 | **train_images_dir** | string | . | path to images |
 |  **val_images_dir** | string | . | (*optional*) path to validation images  |
 |  **split** | float | 1          | (*optional*) fraction to divide training dataset into training and validation sets |
+
+---
 
 ## log_segmentation_dataset
 Parses the segmentation data and logs to tracking server
