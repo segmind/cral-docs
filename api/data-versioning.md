@@ -2,7 +2,7 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-13T14:19:22.252Z
+date: 2020-06-13T14:20:27.583Z
 tags: 
 editor: markdown
 ---
@@ -12,4 +12,7 @@ Your datasets change over time during the lifecycle of an experiment and your pr
 
 ## log_classification_dataset
 
+```py
+cral.data_versioning.log_classification_dataset()
+```
 **Arguments**
