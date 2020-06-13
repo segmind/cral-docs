@@ -2,7 +2,7 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-13T14:38:12.367Z
+date: 2020-06-13T14:58:15.173Z
 tags: 
 editor: markdown
 ---
@@ -18,10 +18,10 @@ Parses the classification data and logs to tracking server
 cral.data_versioning.log_classification_dataset()
 ```
 **Arguments**
-|                       | FPN Layer 1 | FPN Layer 2 | FPN Layer 3 | FPN Layer 4 | FPN Layer 5 |
-|-----------------------|-------------|-------------|-------------|-------------|-------------|
-| scale/size            | 16          | 32          | 64          | 128         | 256         |
-|  209/256 = 0.81640625 | 13.0625     | 26.125      | 52.25       | 104.5       | 209         |
-|  9/16 = 0.5625        | 9           | 18          | 36          | 72          | 144         |
-|  310/256 =  1.2109375 | 19.375      | 38.75       | 77.5        | 155         | 310         |
-|  107/128 = 0.8359375  | 13.375      | 26.75       | 53.5        | 107         | 214         |
+| name                  | Type        | Default     | Description |
+|-----------------------|-------------|-------------|-------------|
+| scale/size            | 16          | 32          | 64          |
+|  209/256 = 0.81640625 | 13.0625     | 26.125      | 52.25       |
+|  9/16 = 0.5625        | 9           | 18          | 36          |
+|  310/256 =  1.2109375 | 19.375      | 38.75       | 77.5        |
+|  107/128 = 0.8359375  | 13.375      | 26.75       | 53.5        |
