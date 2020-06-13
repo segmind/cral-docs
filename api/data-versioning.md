@@ -2,7 +2,7 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-13T15:14:00.601Z
+date: 2020-06-13T15:18:41.426Z
 tags: 
 editor: markdown
 ---
@@ -15,11 +15,24 @@ Parses the classification data and logs to tracking server
 
 
 ```py
-cral.data_versioning.log_classification_dataset()
+cral.data_versioning.log_classification_dataset(*args, **kwargs)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 | **train_images_dir** | string | . | path to images |
+|  **val_images_dir** | string | . | (*optional*) path to validation images  |
+|  **split** | float | 1          | (*optional*) fraction to divide training dataset into training and validation sets |
+
+## log_segmentation_dataset
+Parses the segmentation data and logs to tracking server
+
+```py
+cral.data_versioning.log_segmentation_dataset(*args, **kwargs)
+```
+**Arguments**
+| Name                  | Type        | Default     | Description                            |
+|-----------------------|-------------|-------------|----------------------------------------|
+| **annotation_format** | string | . | coco pascal |
 |  **val_images_dir** | string | . | (*optional*) path to validation images  |
 |  **split** | float | 1          | (*optional*) fraction to divide training dataset into training and validation sets |
