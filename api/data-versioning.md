@@ -2,7 +2,7 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-13T15:31:31.426Z
+date: 2020-06-14T09:45:38.726Z
 tags: 
 editor: markdown
 ---
@@ -23,6 +23,26 @@ cral.data_versioning.log_classification_dataset(*args, **kwargs)
 | **train_images_dir** | string | . | path to images |
 |  **val_images_dir** | string | . | (*optional*) path to validation images  |
 |  **split** | float | 1          | (*optional*) fraction to divide training dataset into training and validation sets |
+
+---
+
+
+## log_object_detection_dataset
+Parses the object detection data and logs to tracking server
+
+```py
+cral.data_versioning.log_object_detection_dataset(*args, **kwargs)
+```
+**Arguments**
+| Name                  | Type        | Default     | Description                            |
+|-----------------------|-------------|-------------|----------------------------------------|
+| **annotation_format** | enum | coco | Options: `coco` `pascal` |
+|  **train_images_dir** | string | . | (*optional*) path to validation images  |
+|  **train_anno_dir** | float | 1          | (*optional*) fraction to divide training dataset into training and validation sets |
+| **img_to_anno** | function | | Function to convert image name to annotation name |
+| **val_images_dir** |
+| **val_anno_dir** | 
+| **split** |
 
 ---
 
