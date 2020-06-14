@@ -2,7 +2,7 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-14T10:25:19.355Z
+date: 2020-06-14T10:26:51.440Z
 tags: 
 editor: markdown
 ---
@@ -22,7 +22,7 @@ cral.data_versioning.log_classification_dataset(*args, **kwargs)
 |-----------------------|-------------|-------------|----------------------------------------|
 | **train_images_dir** | string | . | path to training images |
 |  **val_images_dir** | string | . | (*optional*) path to validation images  |
-|  **split** | float | 1          | (*optional*) fraction to divide training dataset into training and validation sets |
+|  **split** | float | 0.2 | (*optional*) fraction to divide training dataset into training and validation sets |
 
 ---
 
@@ -39,7 +39,7 @@ cral.data_versioning.log_object_detection_dataset(*args, **kwargs)
 | **annotation_format** | enum | coco | Options: `coco` `pascal` |
 |  **train_images_dir** | string | . | (*optional*) path to training images  |
 |  **train_anno_dir** | float | 1 | (*optional*) path to training annotations |
-| **img_to_anno** | function | f(x) = x | (*optional*) Function to convert image name to annotation name. |
+| **img_to_anno** | function | f(x) = x | (*optional*) Function to map image name to annotation name. |
 | **val_images_dir** | string | . | (*optional*) path to validation images |
 | **val_anno_dir** | string | . | (*optional*) path to validation annotations |
 | **split** | string | 0.2 | (*optional*) fraction to divide training dataset into training and validation sets. Ignored if validation dirs are specified. |
@@ -58,7 +58,7 @@ cral.data_versioning.log_segmentation_dataset(*args, **kwargs)
 | **annotation_format** | enum | coco | Options: `coco` `pascal` |
 |  **train_images_dir** | string | . | (*optional*) path to training images  |
 |  **train_anno_dir** | float | 1 | (*optional*) path to training annotations |
-| **img_to_anno** | function | f(x) = x | (*optional*) Function to convert image name to annotation name. |
+| **img_to_anno** | function | f(x) = x | (*optional*) Function to map image name to annotation name. |
 | **val_images_dir** | string | . | (*optional*) path to validation images |
 | **val_anno_dir** | string | . | (*optional*) path to validation annotations |
 | **split** | string | 0.2 | (*optional*) fraction to divide training dataset into training and validation sets. Ignored if validation dirs are specified. |
