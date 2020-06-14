@@ -2,13 +2,13 @@
 title: Installing CRAL
 description: Get started by installing CRAL on your machine.
 published: true
-date: 2020-06-14T11:34:57.184Z
+date: 2020-06-14T11:40:03.563Z
 tags: 
 editor: markdown
 ---
 
 # Installing CRAL
-## Pip Distribution
+## PyPI Distribution
 ## Docker
 > If you need help getting started with docker, please refer this [post](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
 
