@@ -2,10 +2,12 @@
 title: Installing CRAL
 description: Get started by installing CRAL on your machine.
 published: true
-date: 2020-06-11T13:02:26.116Z
+date: 2020-06-14T11:10:55.882Z
 tags: 
 editor: markdown
 ---
 
-# Header
-Your content here
+# Installing CRAL
+## Pip Distribution
+## Docker
+## Binary Distribution
