@@ -2,7 +2,7 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-14T10:48:09.131Z
+date: 2020-06-14T10:48:43.190Z
 tags: 
 editor: markdown
 ---
