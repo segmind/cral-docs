@@ -2,7 +2,7 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-14T10:20:44.242Z
+date: 2020-06-14T10:25:19.355Z
 tags: 
 editor: markdown
 ---
@@ -20,7 +20,7 @@ cral.data_versioning.log_classification_dataset(*args, **kwargs)
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
-| **train_images_dir** | string | . | path to images |
+| **train_images_dir** | string | . | path to training images |
 |  **val_images_dir** | string | . | (*optional*) path to validation images  |
 |  **split** | float | 1          | (*optional*) fraction to divide training dataset into training and validation sets |
 
@@ -37,12 +37,12 @@ cral.data_versioning.log_object_detection_dataset(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 | **annotation_format** | enum | coco | Options: `coco` `pascal` |
-|  **train_images_dir** | string | . | (*optional*) path to validation images  |
-|  **train_anno_dir** | float | 1          | (*optional*) fraction to divide training dataset into training and validation sets |
-| **img_to_anno** | function | f(x) = x | Function to convert image name to annotation name |
+|  **train_images_dir** | string | . | (*optional*) path to training images  |
+|  **train_anno_dir** | float | 1 | (*optional*) path to training annotations |
+| **img_to_anno** | function | f(x) = x | (*optional*) Function to convert image name to annotation name. |
 | **val_images_dir** | string | . | (*optional*) path to validation images |
 | **val_anno_dir** | string | . | (*optional*) path to validation annotations |
-| **split** | string | 0 | (*optional*) fraction to divide training dataset into training and validation sets |
+| **split** | string | 0.2 | (*optional*) fraction to divide training dataset into training and validation sets. Ignored if validation dirs are specified. |
 
 ---
 
@@ -56,9 +56,9 @@ cral.data_versioning.log_segmentation_dataset(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 | **annotation_format** | enum | coco | Options: `coco` `pascal` |
-|  **train_images_dir** | string | . | (*optional*) path to validation images  |
-|  **train_anno_dir** | float | 1          | (*optional*) fraction to divide training dataset into training and validation sets |
-| **img_to_anno** | function | f(x) = x | Function to convert image name to annotation name. |
+|  **train_images_dir** | string | . | (*optional*) path to training images  |
+|  **train_anno_dir** | float | 1 | (*optional*) path to training annotations |
+| **img_to_anno** | function | f(x) = x | (*optional*) Function to convert image name to annotation name. |
 | **val_images_dir** | string | . | (*optional*) path to validation images |
 | **val_anno_dir** | string | . | (*optional*) path to validation annotations |
-| **split** | float | 0 | (*optional*) fraction to divide training dataset into training and validation sets  |
+| **split** | string | 0.2 | (*optional*) fraction to divide training dataset into training and validation sets. Ignored if validation dirs are specified. |
