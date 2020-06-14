@@ -2,7 +2,7 @@
 title: Installing CRAL
 description: Get started by installing CRAL on your machine.
 published: true
-date: 2020-06-14T11:25:21.867Z
+date: 2020-06-14T11:34:57.184Z
 tags: 
 editor: markdown
 ---
@@ -10,19 +10,18 @@ editor: markdown
 # Installing CRAL
 ## Pip Distribution
 ## Docker
+> If you need help getting started with docker, please refer this [post](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
 
 ```
 # Pull & Run Docker image
 sudo docker run --gpus all -it -v /local/path:/docker/path segmind/cral:tf-2.2-py3-jupyter
 ```
-> Please update the pip package inside the docker to the latest one from the [downloads page](https://docs.segmind.com/download) before using the APIs.
 
-> If you need help getting started with docker, please refer this [post](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
+`TODO: @pratik List of items already installed on docker. Auto download cral built in?`
 
-> Note that Nvidia Driver is needed on the host machine. 
+> Note that Nvidia Driver and Nvidia Container Toolkit is needed on the host machine. 
 
-Install the Nvidia Container Toolkit to add NVIDIA® GPU support to Docker. For Ubuntu 16.04/18.04, run the following commands.
-
+To Install the Nvidia Container Toolkit to add NVIDIA® GPU support to Docker. For Ubuntu 16.04/18.04, run the following commands.
 ```
 # Add the package repositories
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
