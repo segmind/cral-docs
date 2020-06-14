@@ -2,7 +2,7 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-14T10:26:51.440Z
+date: 2020-06-14T10:47:55.557Z
 tags: 
 editor: markdown
 ---
@@ -62,3 +62,11 @@ cral.data_versioning.log_segmentation_dataset(*args, **kwargs)
 | **val_images_dir** | string | . | (*optional*) path to validation images |
 | **val_anno_dir** | string | . | (*optional*) path to validation annotations |
 | **split** | string | 0.2 | (*optional*) fraction to divide training dataset into training and validation sets. Ignored if validation dirs are specified. |
+
+## More information & examples
+
+### How to use image_to_anno function to map images to annotations?
+TODO: @pratik
+
+### How long does it take to run these logging tasks?
+TODO: @yaduraj
