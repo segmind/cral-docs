@@ -2,7 +2,7 @@
 title: Installing CRAL
 description: Get started by installing CRAL on your machine.
 published: true
-date: 2020-06-15T07:50:57.748Z
+date: 2020-06-15T07:52:13.065Z
 tags: 
 editor: markdown
 ---
@@ -13,7 +13,12 @@ editor: markdown
 pip3 install cral
 ```
 ## Binary Distribution
+Before installation, please make sure all the [requirements]() are met.
 
+Download the appropriate whl package from [here]() and then, run installation.
+```
+pip3 install /path/to/*.whl
+```
 ## Docker
 > If you need help getting started with docker, please refer this [post](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
 
