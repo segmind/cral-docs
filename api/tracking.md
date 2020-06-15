@@ -2,13 +2,13 @@
 title: Tracking in CRAL
 description: Integrate experiment tracking to your deep learning project.
 published: true
-date: 2020-06-11T08:34:41.521Z
+date: 2020-06-15T09:13:37.021Z
 tags: 
-editor: undefined
+editor: markdown
 ---
 
-# Header
-Your content here
+# cral.tracking
+The `cral.tracking` module provides a high-level API for tracking and logging metadata and artifacts for deep learning algorithms.
 
 ## set_experiment
 ```py
@@ -16,6 +16,16 @@ set_experiment()
 ```
 
 ## log_params
+Log a batch of params for the current run. If no run is active, this method will create a new active run.
+
+```py
+log_params(*args, **kwargs)
+```
+**Arguments**
+| Name | Type | Default | Description |
+|---|---|---|---|
+| params | dict | | Dictionary of parameters.  |
+
 
 ## log_metrics
 
