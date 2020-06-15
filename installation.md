@@ -2,7 +2,7 @@
 title: Installing CRAL
 description: Get started by installing CRAL on your machine.
 published: true
-date: 2020-06-15T07:55:56.945Z
+date: 2020-06-15T08:57:55.725Z
 tags: 
 editor: markdown
 ---
@@ -28,8 +28,6 @@ sudo docker run --gpus all -it -v /local/path:/docker/path segmind/cral:tf-2.2-p
 ```
 
 > If you need help getting started with docker, please refer this [post](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
-
-`TODO: @pratik List of items already installed on docker. Auto download cral built in?`
 
 > Note that Nvidia Driver and Nvidia Container Toolkit is needed on the host machine. 
 
