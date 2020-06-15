@@ -2,7 +2,7 @@
 title: CNN Research Abstraction Library
 description: Build better computer vision models faster with less code.
 published: true
-date: 2020-06-15T08:41:05.742Z
+date: 2020-06-15T08:42:40.263Z
 tags: 
 editor: markdown
 ---
@@ -19,8 +19,8 @@ Our aim is also to make the results of various DLCV algorithms developed in acad
 
 **Reproducible:** Implementations that can easily be trained and reproduced on your own data.
 
-## What it contains
-| Classes | Methods | Description |
+## Components
+| Components | Methods | Description |
 |---|---|---|
 | Tracking | [`Metrics`]() [`Parameters`]() [`Artifacts`]() [`Training Data`]() | Log and query your experiments. |
 | CNN Models | [`Classification`]() [`Object Detection`]() [`Semantic Segmentation`]() | Ready to use implimentations of SOTA algorithms. |
