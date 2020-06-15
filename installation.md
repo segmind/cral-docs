@@ -2,7 +2,7 @@
 title: Installing CRAL
 description: Get started by installing CRAL on your machine.
 published: true
-date: 2020-06-14T11:40:37.068Z
+date: 2020-06-15T07:50:57.748Z
 tags: 
 editor: markdown
 ---
@@ -12,10 +12,12 @@ editor: markdown
 ```
 pip3 install cral
 ```
+## Binary Distribution
 
 ## Docker
 > If you need help getting started with docker, please refer this [post](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
 
+The following docker image contains all the dependencies needed for CRAL including TF 2.2 and OpenCV. Once your docker is running, install the the latest version of CRAL from PyPI.
 ```
 # Pull & Run Docker image
 sudo docker run --gpus all -it -v /local/path:/docker/path segmind/cral:tf-2.2-py3-jupyter
@@ -34,4 +36,3 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.li
 sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
 sudo systemctl restart docker
 ```
-## Binary Distribution
