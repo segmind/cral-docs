@@ -2,7 +2,7 @@
 title: Tracking in CRAL
 description: Integrate experiment tracking to your deep learning project.
 published: true
-date: 2020-06-15T09:18:09.903Z
+date: 2020-06-15T09:22:46.914Z
 tags: 
 editor: markdown
 ---
@@ -26,10 +26,21 @@ log_params(*args, **kwargs)
 **Arguments**
 | Name | Type | Default | Description |
 |---|---|---|---|
-| params | dict | | Dictionary of parameters.  |
-
+| params | dict | | Dictionary of parameters. param_name -> value  |
 
 ## log_metrics
+Log multiple metrics for the current run. If no run is active, this method will create a new active run.
+```py
+log_metrics(*args, **kwargs)
+```
+
+**Arguments**
+| Name | Type | Default | Description |
+|---|---|---|---|
+| metrics | dict | | Dictionary of metrics. metric_name -> value |
+| step | Int | | Step at which to log the specified Metrics. If unspecified, each metric is logged at step zero. |
+
+
 
 ## log_artifacts
 
