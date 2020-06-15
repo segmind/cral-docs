@@ -2,7 +2,7 @@
 title: Installing CRAL
 description: Get started by installing CRAL on your machine.
 published: true
-date: 2020-06-15T07:52:13.065Z
+date: 2020-06-15T07:55:56.945Z
 tags: 
 editor: markdown
 ---
@@ -20,13 +20,14 @@ Download the appropriate whl package from [here]() and then, run installation.
 pip3 install /path/to/*.whl
 ```
 ## Docker
-> If you need help getting started with docker, please refer this [post](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
 
 The following docker image contains all the dependencies needed for CRAL including TF 2.2 and OpenCV. Once your docker is running, install the the latest version of CRAL from PyPI.
 ```
 # Pull & Run Docker image
 sudo docker run --gpus all -it -v /local/path:/docker/path segmind/cral:tf-2.2-py3-jupyter
 ```
+
+> If you need help getting started with docker, please refer this [post](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
 
 `TODO: @pratik List of items already installed on docker. Auto download cral built in?`
 
