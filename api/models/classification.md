@@ -2,7 +2,7 @@
 title: Classification models
 description: List of all the image classification models
 published: true
-date: 2020-06-16T17:00:45.427Z
+date: 2020-06-16T17:00:56.983Z
 tags: 
 editor: markdown
 ---
@@ -197,7 +197,7 @@ cral.models.classification.Xception(*args, **kwargs)
 
 ---
 
-## EfficientNet (b0-b7)
+## EfficientNet (B0-B7)
 Instantiates the EfficientNet architecture.
 ```py
 cral.models.classification.EfficientNetB0(*args, **kwargs)
