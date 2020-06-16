@@ -2,7 +2,7 @@
 title: Classification models
 description: List of all the image classification models
 published: true
-date: 2020-06-16T17:00:56.983Z
+date: 2020-06-16T17:02:56.102Z
 tags: 
 editor: markdown
 ---
@@ -218,6 +218,7 @@ cral.models.classification.EfficientNetB7(*args, **kwargs)
 |**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be valid |
 |**pooling**| string|.| One of `None` ,`avg` or `max`  |
 |**classes**| int |1000| (*optional*) number of classes to classify images into |
+|**classifier_activation**| string or callable|'softmax'|  The activation function to use on the "top" layer|
 
 ---
 
