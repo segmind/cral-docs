@@ -2,12 +2,11 @@
 title: Classification models
 description: List of all the image classification models
 published: true
-date: 2020-06-16T16:41:46.482Z
+date: 2020-06-16T16:42:30.439Z
 tags: 
 editor: markdown
 ---
 
-# Header
 ## DenseNet (121, 169, 201)
 Instantiates the DenseNet architecture.
 ```py
