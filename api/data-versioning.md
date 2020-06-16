@@ -2,222 +2,71 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-16T16:34:07.781Z
+date: 2020-06-16T16:36:31.186Z
 tags: 
 editor: markdown
 ---
 
-# Header
-## DenseNet (121, 169, 201)
-Instantiates the DenseNet architecture.
+# cral.data_versioning
+Your datasets change over time during the lifecycle of an experiment and your project. New data usually keeps getting added weekly or monthly. Training data plays an important factor in reproducing your experiments and version controlling them helps you achive the same.
+
+## log_classification_dataset 
+Parses the classification data and logs the hash to tracking server
+
+
 ```py
-cral.models.classification.DenseNet121()
-cral.models.classification.DenseNet169()
-cral.models.classification.DenseNet201()
+cral.data_versioning.log_classification_dataset(*args, **kwargs)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
-|**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
-|**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
-|**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be one valid value.  |
-|**pooling**| string|.| One of `None` ,`avg` or `max`  |
-|**classes**| int |1000| (*optional*) number of classes to classify images into |
+| **train_images_dir** | string | . | path to training images |
+|  **val_images_dir** | string | . | (*optional*) path to validation images  |
+|  **split** | float | 0.2 | (*optional*) fraction to divide training dataset into training and validation sets |
 
 ---
 
-## InceptionResNetV2
-Instantiates the InceptionResNetV2 architecture.
+
+## log_object_detection_dataset
+Parses the object detection data and logs to tracking server
+
 ```py
-cral.models.classification.InceptionResNetV2()
+cral.data_versioning.log_object_detection_dataset(*args, **kwargs)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
-|**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
-|**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
-|**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be one valid value.  |
-|**pooling**| string|.| One of `None` ,`avg` or `max`  |
-|**classes**| int |1000| (*optional*) number of classes to classify images into |
-|**classifier_activation**| string or callable|'softmax'|  The activation function to use on the "top" layer|
+| **annotation_format** | enum | coco | Options: `coco` `pascal` |
+|  **train_images_dir** | string | . | (*optional*) path to training images  |
+|  **train_anno_dir** | float | 1 | (*optional*) path to training annotations |
+| **img_to_anno** | function | f(x) = x | (*optional*) Function to map image name to annotation name. |
+| **val_images_dir** | string | . | (*optional*) path to validation images |
+| **val_anno_dir** | string | . | (*optional*) path to validation annotations |
+| **split** | string | 0.2 | (*optional*) fraction to divide training dataset into training and validation sets. Ignored if validation dirs are specified. |
 
 ---
 
-## InceptionV3
-Instantiates the InceptionV3 architecture.
+## log_segmentation_dataset
+Parses the segmentation data and logs the hash to tracking server
 
 ```py
-cral.models.classification.InceptionV3()
+cral.data_versioning.log_segmentation_dataset(*args, **kwargs)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
-|**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
-|**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
-|**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be one valid value.  |
-|**pooling**| string|.| One of `None` ,`avg` or `max`  |
-|**classes**| int |1000| (*optional*) number of classes to classify images into |
-|**classifier_activation**| string or callable|'softmax'|  The activation function to use on the "top" layer|
+| **annotation_format** | enum | coco | Options: `coco` `pascal` |
+|  **train_images_dir** | string | . | (*optional*) path to training images  |
+|  **train_anno_dir** | float | 1 | (*optional*) path to training annotations |
+| **img_to_anno** | function | f(x) = x | (*optional*) Function to map image name to annotation name. |
+| **val_images_dir** | string | . | (*optional*) path to validation images |
+| **val_anno_dir** | string | . | (*optional*) path to validation annotations |
+| **split** | string | 0.2 | (*optional*) fraction to divide training dataset into training and validation sets. Ignored if validation dirs are specified. |
 
----
+## More information & examples
 
-## MobileNet
-Instantiates the MobileNet architecture.
-```py
-cral.models.classification.MobileNet()
-```
-**Arguments**
-| Name                  | Type        | Default     | Description                            |
-|-----------------------|-------------|-------------|----------------------------------------|
-|**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
-|**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
-|**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be one valid value.  |
-|**pooling**| string|.| One of `None` ,`avg` or `max`  |
-|**classes**| int |1000| (*optional*) number of classes to classify images into |
-|**alpha**| float|1.0|  Controls the width of the network |
-|**depth_multiplier**| float|1| Depth multiplier for depthwise convolution |
-|**dropout**| float|0.001| Dropout rate  |
-|**classifier_activation**| string or callable|'softmax'|  The activation function to use on the "top" layer|
+### How to use image_to_anno function to map images to annotations?
+TODO: @pratik
 
----
-
-## MobileNetV2
-Instantiates the MobileNetV2 architecture.
-```py
-cral.models.classification.MobileNetV2()
-```
-**Arguments**
-| Name                  | Type        | Default     | Description                            |
-|-----------------------|-------------|-------------|----------------------------------------|
-|**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
-|**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
-|**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be one valid value.  |
-|**pooling**| string|.| One of `None` ,`avg` or `max`  |
-|**classes**| int |1000| (*optional*) number of classes to classify images into |
-|**alpha**| alpha_type|1.0| Controls the width of the network |
-|**classifier_activation**| string or callable|'softmax'|  The activation function to use on the "top" layer|
-
----
-
-## NASNET (Large, Mobile)
-Instantiates the NASNET architecture.
-```py
-cral.models.classification.NASNetLarge()
-cral.models.classification.NASNetMobile()
-```
-**Arguments**
-| Name                  | Type        | Default     | Description                            |
-|-----------------------|-------------|-------------|----------------------------------------|
-|**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
-|**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
-|**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be one valid value.  |
-|**pooling**| string|.| One of `None` ,`avg` or `max`  |
-|**classes**| int |1000| (*optional*) number of classes to classify images into |
-
----
-
-## ResNet (50, 101, 152)
-Instantiates the ResNet architecture.
-```py
-cral.models.classification.ResNet50()
-cral.models.classification.ResNet101()
-cral.models.classification.ResNet152()
-```
-**Arguments**
-| Name                  | Type        | Default     | Description                            |
-|-----------------------|-------------|-------------|----------------------------------------|
-|**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
-|**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
-|**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be one valid value.  |
-|**pooling**| string|.| One of `None` ,`avg` or `max`  |
-|**classes**| int |1000| (*optional*) number of classes to classify images into |
-
----
-
-## ResNetV2 (50, 101, 152)
-Instantiates the ResNetV2 architecture.
-```py
-cral.models.classification.ResNet50V2()
-cral.models.classification.ResNet101V2()
-cral.models.classification.ResNet152V2()
-```
-**Arguments**
-| Name                  | Type        | Default     | Description                            |
-|-----------------------|-------------|-------------|----------------------------------------|
-|**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
-|**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
-|**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be one valid value.  |
-|**pooling**| string|.| One of `None` ,`avg` or `max`  |
-|**classes**| int |1000| (*optional*) number of classes to classify images into |
-|**classifier_activation**| string or callable|'softmax'|  The activation function to use on the "top" layer|
-
----
-
-## VGG (16, 19)
-Instantiates the VGG architecture.
-```py
-cral.models.classification.VGG16()
-cral.models.classification.VGG19()
-```
-**Arguments**
-| Name                  | Type        | Default     | Description                            |
-|-----------------------|-------------|-------------|----------------------------------------|
-|**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
-|**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
-|**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be one valid value.  |
-|**pooling**| string|.| One of `None` ,`avg` or `max`  |
-|**classes**| int |1000| (*optional*) number of classes to classify images into |
-|**classifier_activation**| string or callable|'softmax'|  The activation function to use on the "top" layer|
-
----
-
-## Xception
-Instantiates the Xception architecture.
-```py
-cral.models.classification.Xception()
-```
-**Arguments**
-| Name                  | Type        | Default     | Description                            |
-|-----------------------|-------------|-------------|----------------------------------------|
-|**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
-|**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
-|**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be one valid value.  |
-|**pooling**| string|.| One of `None` ,`avg` or `max`  |
-|**classes**| int |1000| (*optional*) number of classes to classify images into |
-|**classifier_activation**| string or callable|'softmax'|  The activation function to use on the "top" layer|
-
----
-
-## EfficientNet (b0,b1,b2,b3,b4,b5,b6,b7)
-Instantiates the EfficientNet architecture.
-```py
-cral.models.classification.EfficientNetB0()
-cral.models.classification.EfficientNetB1()
-cral.models.classification.EfficientNetB2()
-cral.models.classification.EfficientNetB3()
-cral.models.classification.EfficientNetB4()
-cral.models.classification.EfficientNetB5()
-cral.models.classification.EfficientNetB6()
-cral.models.classification.EfficientNetB7()
-```
-**Arguments**
-| Name                  | Type        | Default     | Description                            |
-|-----------------------|-------------|-------------|----------------------------------------|
-|**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
-|**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
-|**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be one valid value.  |
-|**pooling**| string|.| One of `None` ,`avg` or `max`  |
-|**classes**| int |1000| (*optional*) number of classes to classify images into |
-
----
+### How long does it take to run these logging tasks?
+TODO: @yaduraj
