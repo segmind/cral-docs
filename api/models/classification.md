@@ -2,7 +2,7 @@
 title: Classification models
 description: List of all the image classification models
 published: true
-date: 2020-06-16T16:27:37.561Z
+date: 2020-06-16T16:32:06.921Z
 tags: 
 editor: markdown
 ---
@@ -176,8 +176,7 @@ cral.models.classification.VGG19()
 
 ---
 ## Xception
-Instantiates the InceptionV3 architecture.
-Xception
+Instantiates the Xception architecture.
 ```py
 cral.models.classification.Xception()
 ```
@@ -195,3 +194,24 @@ cral.models.classification.Xception()
 ---
 ## EfficientNet (b0,b1,b2,b3,b4,b5,b6,b7)
 Instantiates the EfficientNet architecture.
+```py
+cral.models.classification.EfficientNetB0()
+cral.models.classification.EfficientNetB1()
+cral.models.classification.EfficientNetB2()
+cral.models.classification.EfficientNetB3()
+cral.models.classification.EfficientNetB4()
+cral.models.classification.EfficientNetB5()
+cral.models.classification.EfficientNetB6()
+cral.models.classification.EfficientNetB7()
+```
+**Arguments**
+| Name                  | Type        | Default     | Description                            |
+|-----------------------|-------------|-------------|----------------------------------------|
+|**include_top**| bool |True| flag for fully-connected layer at the top of the network |
+|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
+|**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
+|**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be one valid value.  |
+|**pooling**| string|.| One of `None` ,`avg` or `max`  |
+|**classes**| int |1000| (*optional*) number of classes to classify images into |
+
+---
