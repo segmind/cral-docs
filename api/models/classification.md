@@ -2,7 +2,7 @@
 title: Classification models
 description: List of all the image classification models
 published: true
-date: 2020-06-16T16:07:05.758Z
+date: 2020-06-16T16:07:11.312Z
 tags: 
 editor: markdown
 ---
