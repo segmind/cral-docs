@@ -2,7 +2,7 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-16T16:36:31.186Z
+date: 2020-06-16T16:43:40.348Z
 tags: 
 editor: markdown
 ---
@@ -69,4 +69,4 @@ cral.data_versioning.log_segmentation_dataset(*args, **kwargs)
 TODO: @pratik
 
 ### How long does it take to run these logging tasks?
-TODO: @yaduraj
+For a Dataset with 32 classes 10k images (2.18gb) it takes 25s for the whole process
