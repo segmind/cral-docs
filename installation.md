@@ -2,12 +2,27 @@
 title: Installing CRAL
 description: Get started by installing CRAL on your machine.
 published: true
-date: 2020-06-15T08:59:11.187Z
+date: 2020-06-16T15:56:00.463Z
 tags: 
 editor: markdown
 ---
 
-# Installing CRAL
+## Requirements
+The following are the packages and hardware requirements to install and use CRAL.
+
+### Packages
+- tensorflow==2.2
+- cython
+- numpy
+- opencv-python==3.4.2.17
+
+### Hard Requirements
+
+- Ubuntu 16.04 or higher
+- 4-Core CPU
+- 8GB RAM or higher
+- Nvidia GPU of compute capability 3.0 or higher
+
 ## PyPI Distribution
 ```
 pip3 install cral
