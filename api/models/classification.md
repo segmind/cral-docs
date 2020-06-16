@@ -2,7 +2,7 @@
 title: Classification models
 description: List of all the image classification models
 published: true
-date: 2020-06-16T16:42:30.439Z
+date: 2020-06-16T16:50:29.334Z
 tags: 
 editor: markdown
 ---
@@ -18,7 +18,7 @@ cral.models.classification.DenseNet201(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
+|**weights**| string|'imagenet'| one of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
 |**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be valid |
 |**pooling**| string|.| One of `None` ,`avg` or `max`  |
@@ -35,7 +35,7 @@ cral.models.classification.InceptionResNetV2(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
+|**weights**| string|'imagenet'| one of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
 |**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be valid |
 |**pooling**| string|.| One of `None` ,`avg` or `max`  |
@@ -54,7 +54,7 @@ cral.models.classification.InceptionV3(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
+|**weights**| string|'imagenet'| one of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
 |**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be valid |
 |**pooling**| string|.| One of `None` ,`avg` or `max`  |
@@ -72,7 +72,7 @@ cral.models.classification.MobileNet(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
+|**weights**| string|'imagenet'| one of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
 |**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be valid |
 |**pooling**| string|.| One of `None` ,`avg` or `max`  |
@@ -93,7 +93,7 @@ cral.models.classification.MobileNetV2(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
+|**weights**| string|'imagenet'| one of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
 |**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be valid |
 |**pooling**| string|.| One of `None` ,`avg` or `max`  |
@@ -113,7 +113,7 @@ cral.models.classification.NASNetMobile(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
+|**weights**| string|'imagenet'| one of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
 |**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be valid |
 |**pooling**| string|.| One of `None` ,`avg` or `max`  |
@@ -132,7 +132,7 @@ cral.models.classification.ResNet152(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
+|**weights**| string|'imagenet'| one of `None`,`imagenet` or the path to weights file|
 |**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
 |**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be valid |
 |**pooling**| string|.| One of `None` ,`avg` or `max`  |
@@ -151,7 +151,7 @@ cral.models.classification.ResNet152V2(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
+|**weights**| string|'imagenet'| one of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
 |**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be valid |
 |**pooling**| string|.| One of `None` ,`avg` or `max`  |
@@ -170,7 +170,7 @@ cral.models.classification.VGG19(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
+|**weights**| string|'imagenet'| one of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
 |**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be valid |
 |**pooling**| string|.| One of `None` ,`avg` or `max`  |
@@ -188,7 +188,7 @@ cral.models.classification.Xception(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
+|**weights**| string|'imagenet'| one of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
 |**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be valid |
 |**pooling**| string|.| One of `None` ,`avg` or `max`  |
@@ -213,7 +213,7 @@ cral.models.classification.EfficientNetB7(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**| bool |False| flag for fully-connected layer at the top of the network |
-|**weights**| string|'imagenet'| one of `None`,`imagenet`,or the path to the weights file|
+|**weights**| string|'imagenet'| one of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**| Tensor|.| (*optional*) Keras tensor to use as image input for the model. |
 |**input_shape**| tuple|.|(*optional*) shape tuple E.g. `(224, 224, 3)` would be valid |
 |**pooling**| string|.| One of `None` ,`avg` or `max`  |
