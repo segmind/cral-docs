@@ -2,7 +2,7 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-16T16:49:13.014Z
+date: 2020-06-17T11:05:24.048Z
 tags: 
 editor: markdown
 ---
@@ -66,7 +66,22 @@ cral.data_versioning.log_segmentation_dataset(*args, **kwargs)
 ## More information & examples
 
 ### How to use image_to_anno function to map images to annotations?
-TODO: @pratik
+Let say your Dataset is Structured like
 
+──>Images
+───>Image_1.jpg
+───>Image_2.jpg
+───>Image_3.jpg
+...
+──>Annotations
+───>Annotation_1.jpg
+───>Annotation_2.jpg
+───>Annotation_3.jpg
+...
+Then the Image to Annotation Function would be
+```py
+def image_to_annotation(Image_name):
+	return "Annotation"+Image_name[-2:]
+```
 ### How long does it take to run these logging tasks?
 For a Dataset with 32 classes 10k images (2.18gb) it takes 25s for the whole process
