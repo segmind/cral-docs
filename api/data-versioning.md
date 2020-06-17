@@ -2,7 +2,7 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-17T11:07:19.954Z
+date: 2020-06-17T11:34:09.423Z
 tags: 
 editor: markdown
 ---
@@ -81,7 +81,9 @@ Let say your Dataset is Structured like
 Then the Image to Annotation Function would be
 ```py
 def image_to_annotation(Image_name):
-	return "Annotation"+Image_name[-2:]
+	return "Annotation"+Image_name[5:]
+
+
 ```
 ### How long does it take to run these logging tasks?
 For a Dataset with 32 classes 10k images (2.18gb) it takes 25s for the whole process
