@@ -2,7 +2,7 @@
 title: Classification models
 description: List of all the image classification models
 published: true
-date: 2020-06-17T01:17:44.442Z
+date: 2020-06-17T01:19:05.920Z
 tags: 
 editor: markdown
 ---
@@ -18,7 +18,7 @@ cral.models.classification.DenseNet201(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**|bool|False|Flag for fully-connected prediction layer at the top of the network|
-|**weights**|string|'imagenet'|One of `None`,`imagenet` or the path to the weights file|
+|**weights**|string|`imagenet`|One of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**|Tensor|None|(*optional*) Keras tensor to use as image input for the model|
 |**input_shape**|tuple|None|(*optional*) Shape tuple E.g. `(224, 224, 3)` would be valid|
 |**pooling**|string|None|One of `None` ,`avg` or `max`|
@@ -35,12 +35,12 @@ cral.models.classification.InceptionResNetV2(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**|bool|False|Flag for fully-connected prediction layer at the top of the network|
-|**weights**|string|'imagenet'|One of `None`,`imagenet` or the path to the weights file|
+|**weights**|string|`imagenet`|One of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**|Tensor|None|(*optional*) Keras tensor to use as image input for the model|
 |**input_shape**|tuple|None|(*optional*) Shape tuple E.g. `(224, 224, 3)` would be valid|
 |**pooling**|string|None|One of `None` ,`avg` or `max`|
 |**classes**|int|1000|(*optional*) number of classes to classify images into|
-|**classifier_activation**|string or callable|'softmax'|The activation function to use on the "top" layer|
+|**classifier_activation**|string or callable|`softmax`|The activation function to use on the "top" layer|
 
 ---
 
@@ -54,12 +54,12 @@ cral.models.classification.InceptionV3(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**|bool|False|Flag for fully-connected prediction layer at the top of the network|
-|**weights**|string|'imagenet'|One of `None`,`imagenet` or the path to the weights file|
+|**weights**|string|`imagenet`|One of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**|Tensor|None|(*optional*) Keras tensor to use as image input for the model|
 |**input_shape**|tuple|None|(*optional*) Shape tuple E.g. `(224, 224, 3)` would be valid|
 |**pooling**|string|None|One of `None` ,`avg` or `max`|
 |**classes**|int|1000|(*optional*) number of classes to classify images into|
-|**classifier_activation**|string or callable|'softmax'|The activation function to use on the "top" layer|
+|**classifier_activation**|string or callable|`softmax`|The activation function to use on the "top" layer|
 
 ---
 
@@ -72,7 +72,7 @@ cral.models.classification.MobileNet(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**|bool|False|Flag for fully-connected prediction layer at the top of the network|
-|**weights**|string|'imagenet'|One of `None`,`imagenet` or the path to the weights file|
+|**weights**|string|`imagenet`|One of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**|Tensor|None|(*optional*) Keras tensor to use as image input for the model|
 |**input_shape**|tuple|None|(*optional*) Shape tuple E.g. `(224, 224, 3)` would be valid|
 |**pooling**|string|None|One of `None` ,`avg` or `max`|
@@ -80,7 +80,7 @@ cral.models.classification.MobileNet(*args, **kwargs)
 |**alpha**| float|1.0|Controls the width of the network|
 |**depth_multiplier**|float|1|Depth multiplier for depthwise convolution|
 |**dropout**| float|0.001|Dropout rate|
-|**classifier_activation**|string or callable|'softmax'|The activation function to use on the "top" layer|
+|**classifier_activation**|string or callable|`softmax`|The activation function to use on the "top" layer|
 
 ---
 
@@ -93,13 +93,13 @@ cral.models.classification.MobileNetV2(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**|bool|False|Flag for fully-connected prediction layer at the top of the network|
-|**weights**|string|'imagenet'|One of `None`,`imagenet` or the path to the weights file|
+|**weights**|string|`imagenet`|One of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**|Tensor|None|(*optional*) Keras tensor to use as image input for the model|
 |**input_shape**|tuple|None|(*optional*) Shape tuple E.g. `(224, 224, 3)` would be valid|
 |**pooling**|string|None|One of `None` ,`avg` or `max`|
 |**classes**|int|1000|(*optional*) number of classes to classify images into|
 |**alpha**| alpha_type|1.0|Controls the width of the network|
-|**classifier_activation**|string or callable|'softmax'|The activation function to use on the "top" layer|
+|**classifier_activation**|string or callable|`softmax`|The activation function to use on the "top" layer|
 
 ---
 
@@ -113,7 +113,7 @@ cral.models.classification.NASNetMobile(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**|bool|False|Flag for fully-connected prediction layer at the top of the network|
-|**weights**|string|'imagenet'|One of `None`,`imagenet` or the path to the weights file|
+|**weights**|string|`imagenet`|One of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**|Tensor|None|(*optional*) Keras tensor to use as image input for the model|
 |**input_shape**|tuple|None|(*optional*) Shape tuple E.g. `(224, 224, 3)` would be valid|
 |**pooling**|string|None|One of `None` ,`avg` or `max`|
@@ -132,7 +132,7 @@ cral.models.classification.ResNet152(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**|bool|False|Flag for fully-connected prediction layer at the top of the network|
-|**weights**| string|'imagenet'| one of `None`,`imagenet` or the path to weights file|
+|**weights**| string|`imagenet`| one of `None`,`imagenet` or the path to weights file|
 |**input_tensor**|Tensor|None|(*optional*) Keras tensor to use as image input for the model|
 |**input_shape**|tuple|None|(*optional*) Shape tuple E.g. `(224, 224, 3)` would be valid|
 |**pooling**|string|None|One of `None` ,`avg` or `max`|
@@ -151,12 +151,12 @@ cral.models.classification.ResNet152V2(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**|bool|False|Flag for fully-connected prediction layer at the top of the network|
-|**weights**|string|'imagenet'|One of `None`,`imagenet` or the path to the weights file|
+|**weights**|string|`imagenet`|One of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**|Tensor|None|(*optional*) Keras tensor to use as image input for the model|
 |**input_shape**|tuple|None|(*optional*) Shape tuple E.g. `(224, 224, 3)` would be valid|
 |**pooling**|string|None|One of `None` ,`avg` or `max`|
 |**classes**|int|1000|(*optional*) number of classes to classify images into|
-|**classifier_activation**|string or callable|'softmax'|The activation function to use on the "top" layer|
+|**classifier_activation**|string or callable|`softmax`|The activation function to use on the "top" layer|
 
 ---
 
@@ -170,12 +170,12 @@ cral.models.classification.VGG19(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**|bool|False|Flag for fully-connected prediction layer at the top of the network|
-|**weights**|string|'imagenet'|One of `None`,`imagenet` or the path to the weights file|
+|**weights**|string|`imagenet`|One of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**|Tensor|None|(*optional*) Keras tensor to use as image input for the model|
 |**input_shape**|tuple|None|(*optional*) Shape tuple E.g. `(224, 224, 3)` would be valid|
 |**pooling**|string|None|One of `None` ,`avg` or `max`|
 |**classes**|int|1000|(*optional*) number of classes to classify images into|
-|**classifier_activation**|string or callable|'softmax'|The activation function to use on the "top" layer|
+|**classifier_activation**|string or callable|`softmax`|The activation function to use on the "top" layer|
 
 ---
 
@@ -188,12 +188,12 @@ cral.models.classification.Xception(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**|bool|False|Flag for fully-connected prediction layer at the top of the network|
-|**weights**|string|'imagenet'|One of `None`,`imagenet` or the path to the weights file|
+|**weights**|string|`imagenet`|One of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**|Tensor|None|(*optional*) Keras tensor to use as image input for the model|
 |**input_shape**|tuple|None|(*optional*) Shape tuple E.g. `(224, 224, 3)` would be valid|
 |**pooling**|string|None|One of `None` ,`avg` or `max`|
 |**classes**|int|1000|(*optional*) number of classes to classify images into|
-|**classifier_activation**|string or callable|'softmax'|The activation function to use on the "top" layer|
+|**classifier_activation**|string or callable|`softmax`|The activation function to use on the "top" layer|
 
 ---
 
@@ -213,12 +213,12 @@ cral.models.classification.EfficientNetB7(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |**include_top**|bool|False|Flag for fully-connected prediction layer at the top of the network|
-|**weights**|string|'imagenet'|One of `None`,`imagenet` or the path to the weights file|
+|**weights**|string|`imagenet`|One of `None`,`imagenet` or the path to the weights file|
 |**input_tensor**|Tensor|None|(*optional*) Keras tensor to use as image input for the model|
 |**input_shape**|tuple|None|(*optional*) Shape tuple E.g. `(224, 224, 3)` would be valid|
 |**pooling**|string|None|One of `None` ,`avg` or `max`|
 |**classes**|int|1000|(*optional*) number of classes to classify images into|
-|**classifier_activation**|string or callable|'softmax'|The activation function to use on the "top" layer|
+|**classifier_activation**|string or callable|`softmax`|The activation function to use on the "top" layer|
 
 ---
 
