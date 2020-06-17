@@ -2,7 +2,7 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-17T11:05:24.048Z
+date: 2020-06-17T11:07:19.954Z
 tags: 
 editor: markdown
 ---
@@ -74,9 +74,9 @@ Let say your Dataset is Structured like
 ───>Image_3.jpg
 ...
 ──>Annotations
-───>Annotation_1.jpg
-───>Annotation_2.jpg
-───>Annotation_3.jpg
+───>Annotation_1.xml
+───>Annotation_2.xml
+───>Annotation_3.xml
 ...
 Then the Image to Annotation Function would be
 ```py
