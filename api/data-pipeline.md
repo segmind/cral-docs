@@ -2,7 +2,7 @@
 title: Pipeline
 description: 
 published: true
-date: 2020-06-23T19:51:30.922Z
+date: 2020-06-23T19:54:23.586Z
 tags: 
 editor: markdown
 ---
@@ -156,7 +156,7 @@ pipeline.train(
 
 ```
 
-### Adding custom Loss,optimizer,metrics
+### Adding custom Losses,Optimizer and Metrics
 Lets say you want to use
 Loss = CategoricalCrossentropy
 Optimizer= adam
@@ -166,7 +166,9 @@ Metrics = accuracy, precision and recall
 compile_options={}
 compile_options['loss']=tf.keras.losses.CategoricalCrossentropy()
 compile_options['optimizer']=tf.keras.optimizers.Adam()
-compile_options['metrics']=[tf.keras.metrics.Accuracy(),tf.keras.metrics.Precision(),tf.keras.metrics.Recall()]
+compile_options['metrics']=[tf.keras.metrics.Accuracy() ,
+														tf.keras.metrics.Precision() ,
+  													tf.keras.metrics.Recall()]
 
 pipeline.train(
      num_epochs=8,
