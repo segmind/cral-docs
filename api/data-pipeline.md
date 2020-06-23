@@ -2,7 +2,7 @@
 title: Pipeline
 description: 
 published: true
-date: 2020-06-23T19:47:13.611Z
+date: 2020-06-23T19:51:30.922Z
 tags: 
 editor: markdown
 ---
@@ -108,7 +108,7 @@ pipeline.predict(*args, **kwargs)
 
 ## More information & examples
 
-### Adding Custom model to pipeline
+### Adding Custom model and preprocessing function to pipeline
 Lets say you want to your own custom model and preprocessing to the pipeline 
 ```py
 # After adding data
@@ -121,9 +121,13 @@ custom_model.add(layers.MaxPooling2D((2, 2)))
 custom_model.add(layers.Conv2D(64, (3, 3), activation='relu'))
 custom_model.add(layers.Flatten())
 custom_model.add(layers.Dense(64, activation='relu'))
-custom_model.add(layers.Dense(2))
+custom_model.add(layers.Dense(2, activation='softmax'))
 
-# custom_model.compile(optimizer='adam',loss=tf.keras.losses.CategoricalCrossentropy(),metrics='accuracy')
+# custom_model.compile(
+# 	optimizer='adam',
+#   loss=tf.keras.losses.CategoricalCrossentropy(),
+#   metrics='accuracy')
+  
 # Preprocessing Function 
 def preprocessing_func(x):
     """Normalize Input image to 0 - 1"""
@@ -133,10 +137,9 @@ pipeline.set_algo(model=custom_model,preprocessing_fn=preprocessing_func)
 
 ```
 ### Adding Custom callback to pipeline
-Lets say you want to your own custom model and preprocessing to the pipeline 
+Lets say you want to stop training when Validation Loss has stopped improving
 ```py
 #after adding data and setting model
-#Lets say you want to stop training when Validation Loss has stopped improving
 
 custom_callback=tf.keras.callbacks.EarlyStopping(monitor='val_loss')
 callback_list=[custom_callback]
@@ -154,18 +157,16 @@ pipeline.train(
 ```
 
 ### Adding custom Loss,optimizer,metrics
-Lets say you want to your own custom model and preprocessing to the pipeline 
+Lets say you want to use
+Loss = CategoricalCrossentropy
+Optimizer= adam
+Metrics = accuracy, precision and recall
 ```py
 #after adding data and setting model
-#Lets say you want to use
-# Loss = CategoricalCrossentropy
-# Optimizer= adam
-# Metrics = accuracy,precision and recall
-
 compile_options={}
 compile_options['loss']=tf.keras.losses.CategoricalCrossentropy()
-compile_options['metrics']=[tf.keras.metrics.Accuracy(),tf.keras.metrics.Precision(),tf.keras.metrics.Recall()]
 compile_options['optimizer']=tf.keras.optimizers.Adam()
+compile_options['metrics']=[tf.keras.metrics.Accuracy(),tf.keras.metrics.Precision(),tf.keras.metrics.Recall()]
 
 pipeline.train(
      num_epochs=8,
