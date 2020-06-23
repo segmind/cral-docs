@@ -2,7 +2,7 @@
 title: Pipeline
 description: 
 published: true
-date: 2020-06-18T05:01:05.720Z
+date: 2020-06-23T19:06:04.092Z
 tags: 
 editor: markdown
 ---
@@ -11,8 +11,8 @@ editor: markdown
 Cral pipeline for classification task
 
 
-## Add Data
-Parses dataset once for generating metadata and versions the data
+## add_data
+Parses dataset once for generating metadata and versions the data.
 
 ```py
 from cral.pipeline import ClassificationPipe
@@ -28,8 +28,8 @@ pipeline.add_data(*args, **kwargs)
 
 ---
 
-## Lock Data
-Parse Data and makes tf-records and creates meta-data
+## lock_data
+Parse Data and makes tf-records and creates meta-data.
 
 ```py
 pipeline.lock_data(gen_stats=False)
@@ -41,8 +41,8 @@ pipeline.lock_data(gen_stats=False)
 
 ---
 
-## Set Augmentation
-Sets the augmentation pipeline
+## set_aug
+Sets augmentations for the pipeline
 ```py
 pipeline.set_aug(aug)
 ```
@@ -50,7 +50,7 @@ pipeline.set_aug(aug)
 | Name                  | Type        | Default     | Description                            |
 |-----------------------|-------------|-------------|----------------------------------------|
 |aug| list| -| List of Image Augmentations from Albumentations|
-## Set Algo
+## set_algo
 Set model for training and prediction
 
 ```py
@@ -70,7 +70,7 @@ pipeline.set_algo(*args, **kwargs)
 
 ---
 
-## Train
+## train
 This function starts the training loop, with metric logging enabled
 
 ```py
@@ -104,5 +104,49 @@ pipeline.predict(*args, **kwargs)
 |-----------------------|-------------|-------------|----------------------------------------|
 |img_list |list|.| list of path to images for which predictions are going to be made
 |return_names| bool|False| (*optional*) If True returns class-label-names else class-label-ints
+
+
+## More information & examples
+
+### Adding Custom model to pipeline
+Lets say you want to your own custom model and preprocessing to the pipeline 
+```py
+#Model Defination
+model = models.Sequential()
+model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+model.add(layers.Flatten())
+model.add(layers.Dense(64, activation='relu'))
+model.add(layers.Dense(10))
+
+#Preprocessing Function defination
+def preprocessing_func(x):
+"""Normalize Input image to 0 - 1"""
+	return x/255.0
+  
+pipeline.set_alog(model=custom_model,preprocessing_func=preprocessing_func)
+
+```
+### Adding Custom callback to pipeline
+Lets say you want to your own custom model and preprocessing to the pipeline 
+```py
+#after adding data and setting model
+#Lets say you want to stop training when Validation Loss has stopped improving
+
+custom_callback=tf.keras.callbacks.EarlyStopping(monitor='val_loss')
+callback_list=[custom_callback]
+
+pipeline.train(
+    epochs=10,
+    batch_size=32,
+    height=300,
+    width=300,
+    callbacks=callback_list)
+
+```
+
 
 
