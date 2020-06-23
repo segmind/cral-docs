@@ -2,7 +2,7 @@
 title: Pipeline
 description: 
 published: true
-date: 2020-06-23T19:54:23.586Z
+date: 2020-06-23T19:54:39.862Z
 tags: 
 editor: markdown
 ---
