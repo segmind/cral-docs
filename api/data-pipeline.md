@@ -2,7 +2,7 @@
 title: Pipeline
 description: 
 published: true
-date: 2020-06-23T20:04:45.783Z
+date: 2020-06-23T20:05:40.129Z
 tags: 
 editor: markdown
 ---
@@ -166,9 +166,9 @@ Metrics = accuracy, precision and recall
 compile_options={}
 compile_options['loss'] = tf.keras.losses.CategoricalCrossentropy()
 compile_options['optimizer'] = tf.keras.optimizers.Adam()
-compile_options['metrics'] = [tf.keras.metrics.Accuracy(),
-							 tf.keras.metrics.Precision(),
-  													  tf.keras.metrics.Recall()]
+compile_options['metrics'] = [ tf.keras.metrics.Accuracy() ,
+                               tf.keras.metrics.Precision() ,
+                               tf.keras.metrics.Recall() ]
 
 pipeline.train(
      num_epochs=8,
