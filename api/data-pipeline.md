@@ -2,7 +2,7 @@
 title: Pipeline
 description: 
 published: true
-date: 2020-06-23T19:06:04.092Z
+date: 2020-06-23T19:39:57.065Z
 tags: 
 editor: markdown
 ---
@@ -111,23 +111,25 @@ pipeline.predict(*args, **kwargs)
 ### Adding Custom model to pipeline
 Lets say you want to your own custom model and preprocessing to the pipeline 
 ```py
-#Model Defination
-model = models.Sequential()
-model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)))
-model.add(layers.MaxPooling2D((2, 2)))
-model.add(layers.Conv2D(64, (3, 3), activation='relu'))
-model.add(layers.MaxPooling2D((2, 2)))
-model.add(layers.Conv2D(64, (3, 3), activation='relu'))
-model.add(layers.Flatten())
-model.add(layers.Dense(64, activation='relu'))
-model.add(layers.Dense(10))
+# After adding data
+# Model Definationfrom tensorflow.keras import models,layers
+custom_model = models.Sequential()
+custom_model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(300, 300, 3)))
+custom_model.add(layers.MaxPooling2D((2, 2)))
+custom_model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+custom_model.add(layers.MaxPooling2D((2, 2)))
+custom_model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+custom_model.add(layers.Flatten())
+custom_model.add(layers.Dense(64, activation='relu'))
+custom_model.add(layers.Dense(2))
 
-#Preprocessing Function defination
+# custom_model.compile(optimizer='adam',loss=tf.keras.losses.CategoricalCrossentropy(),metrics='accuracy')
+# Preprocessing Function 
 def preprocessing_func(x):
-"""Normalize Input image to 0 - 1"""
-	return x/255.0
+    """Normalize Input image to 0 - 1"""
+    return x/255.0
   
-pipeline.set_alog(model=custom_model,preprocessing_func=preprocessing_func)
+pipeline.set_algo(model=custom_model,height=300,width=300,preprocessing_fn=preprocessing_func)
 
 ```
 ### Adding Custom callback to pipeline
@@ -140,11 +142,40 @@ custom_callback=tf.keras.callbacks.EarlyStopping(monitor='val_loss')
 callback_list=[custom_callback]
 
 pipeline.train(
-    epochs=10,
-    batch_size=32,
-    height=300,
-    width=300,
-    callbacks=callback_list)
+     num_epochs=8,
+     snapshot_prefix='prefix',
+     snapshot_path='/tmp',
+     snapshot_every_n=4,
+     batch_size=8,
+     height=300,
+     width=300,
+     callbacks=callback_list)
+
+```
+
+### Adding custom Loss,optimizer,metrics
+Lets say you want to your own custom model and preprocessing to the pipeline 
+```py
+#after adding data and setting model
+#Lets say you want to use
+# Loss = CategoricalCrossentropy
+# Optimizer= adam
+# Metrics = accuracy,precision and recall
+
+compile_options={}
+compile_options['loss']=tf.keras.losses.CategoricalCrossentropy()
+compile_options['metrics']=[tf.keras.metrics.Accuracy(),tf.keras.metrics.Precision(),tf.keras.metrics.Recall()]
+compile_options['optimizer']=tf.keras.optimizers.Adam()
+
+pipeline.train(
+     num_epochs=8,
+     snapshot_prefix='prefix',
+     snapshot_path='/tmp',
+     snapshot_every_n=4,
+     batch_size=8,
+     height=300,
+     width=300,
+     compile_options=compile_options)
 
 ```
 
