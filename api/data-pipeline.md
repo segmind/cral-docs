@@ -2,7 +2,7 @@
 title: Pipeline
 description: 
 published: true
-date: 2020-06-23T19:39:57.065Z
+date: 2020-06-23T19:47:13.611Z
 tags: 
 editor: markdown
 ---
@@ -129,7 +129,7 @@ def preprocessing_func(x):
     """Normalize Input image to 0 - 1"""
     return x/255.0
   
-pipeline.set_algo(model=custom_model,height=300,width=300,preprocessing_fn=preprocessing_func)
+pipeline.set_algo(model=custom_model,preprocessing_fn=preprocessing_func)
 
 ```
 ### Adding Custom callback to pipeline
