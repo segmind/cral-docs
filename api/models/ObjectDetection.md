@@ -2,14 +2,14 @@
 title: Object Detection Models
 description: 
 published: true
-date: 2020-07-12T15:36:57.616Z
+date: 2020-07-12T15:37:03.747Z
 tags: 
 editor: markdown
 ---
 
 # ObjectDetection Models
 
-## Retinanet (121, 169, 201)
+## Retinanet
 Instantiates the retinanet architecture 
 Supports backbones of Resnet and DenseNet family
 For more info follow [link](https://blog.segmind.com/an-introduction-to-retinanet-and-how-we-make-it-easier-to-use/)
