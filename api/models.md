@@ -2,11 +2,11 @@
 title: Models
 description: Model library for common DLCV tasks such as classification, detection, segmentation and more.
 published: true
-date: 2020-06-11T08:51:04.147Z
+date: 2020-07-12T15:27:42.605Z
 tags: 
-editor: undefined
+editor: markdown
 ---
 
 ## [Classification](https://cral.segmind.com/api/models/classification)
-## Detection <small><sup>(Coming soon)</sup></small>
+## [Object Detection](https://cral.segmind.com/api/models/ObjectDetection)
 
