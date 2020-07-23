@@ -2,9 +2,9 @@
 title: CNN Research Abstraction Library
 description: Build better computer vision models faster with less code.
 published: true
-date: 2020-06-15T08:42:40.263Z
+date: 2020-07-21T06:08:34.132Z
 tags: 
-editor: markdown
+editor: undefined
 ---
 
 CRAL is a deep learning computer vision library for data scientists, researchers, and developers. With main focus on applied deep learning, CRAL library encourages rapid development and comes with ready-to-use state-of-the-art networks and other pragmatic tools for a variety of applications in the computer vision space.
@@ -22,6 +22,6 @@ Our aim is also to make the results of various DLCV algorithms developed in acad
 ## Components
 | Components | Methods | Description |
 |---|---|---|
-| Tracking | [`Metrics`]() [`Parameters`]() [`Artifacts`]() [`Training Data`]() | Log and query your experiments. |
-| CNN Models | [`Classification`]() [`Object Detection`]() [`Semantic Segmentation`]() | Ready to use implimentations of SOTA algorithms. |
+| Tracking | [`Metrics`]() [`Parameters`]() [`Artifacts`]() [`Training Data`](/api/data-versioning) | Log and query your experiments. |
+| CNN Models | [`Classification`](api/models/classification) [`Object Detection`](/api/models/ObjectDetection) [`Semantic Segmentation`]() | Ready to use implimentations of SOTA algorithms. |
 | Pipeline tools | [`Data Ingesion`]() [`Data Validation`]() | Load and validate your data before you start training. |

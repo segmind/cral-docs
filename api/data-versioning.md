@@ -2,13 +2,13 @@
 title: Data Versioning
 description: Version controlling your datasets
 published: true
-date: 2020-06-17T11:34:09.423Z
+date: 2020-07-16T20:42:02.309Z
 tags: 
-editor: markdown
+editor: undefined
 ---
 
 # cral.data_versioning
-Your datasets change over time during the lifecycle of an experiment and your project. New data usually keeps getting added weekly or monthly. Training data plays an important factor in reproducing your experiments and version controlling them helps you achive the same.
+Your datasets change over time during the lifecycle of an experiment and your project. New data usually keeps getting added weekly or monthly. Training data plays an important factor in reproducing your experiments and version controlling them helps you achieve the same.
 
 ## log_classification_dataset 
 Parses the classification data and logs the hash to tracking server
@@ -19,7 +19,7 @@ cral.data_versioning.log_classification_dataset(*args, **kwargs)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
-|-----------------------|-------------|-------------|----------------------------------------|
+|:--:|:--:|:--:|:--:|
 | **train_images_dir** | string | . | path to training images |
 |  **val_images_dir** | string | . | (*optional*) path to validation images  |
 |  **split** | float | 0.2 | (*optional*) fraction to divide training dataset into training and validation sets |
@@ -35,7 +35,7 @@ cral.data_versioning.log_object_detection_dataset(*args, **kwargs)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
-|-----------------------|-------------|-------------|----------------------------------------|
+|:--:|:--:|:--:|:--:|
 | **annotation_format** | enum | coco | Options: `coco` `pascal` |
 |  **train_images_dir** | string | . | (*optional*) path to training images  |
 |  **train_anno_dir** | float | 1 | (*optional*) path to training annotations |
@@ -54,7 +54,7 @@ cral.data_versioning.log_segmentation_dataset(*args, **kwargs)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
-|-----------------------|-------------|-------------|----------------------------------------|
+|:--:|:--:|:--:|:--:|
 | **annotation_format** | enum | coco | Options: `coco` `pascal` |
 |  **train_images_dir** | string | . | (*optional*) path to training images  |
 |  **train_anno_dir** | float | 1 | (*optional*) path to training annotations |
@@ -80,7 +80,7 @@ Let say your Dataset is Structured like
 ...
 Then the Image to Annotation Function would be
 ```py
-def image_to_annotation(Image_name):
+def img_to_anno(Image_name):
 	return "Annotation"+Image_name[5:]
 
 

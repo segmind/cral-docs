@@ -2,9 +2,9 @@
 title: Requirements
 description: Prerequisites to install CRAL
 published: true
-date: 2020-07-10T20:44:14.643Z
+date: 2020-07-12T16:59:56.840Z
 tags: 
-editor: markdown
+editor: undefined
 ---
 
 CRAL is built on top of **TensorFlow 2** and internally uses the built in Keras module. Training is computationally intensive, more so in computer vision space where training data goes into GBs and TBs. Hence, it is strongly recomended to use a powerful GPU based system to run training jobs.
@@ -22,6 +22,8 @@ CRAL is tested and supported on the following 64-bit systems:
 - Python 3.5–3.8
 - Ubuntu 16.04 or later
 - NVIDIA® GPU driver 418.x or higher (for CUDA 10.1)
+- Tensorflow 2
+- opencv-python==3.4.2.17
 
 We recommend using our [Docker image](/install/docker) with GPU support to simplify the installation process.
 

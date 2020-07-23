@@ -2,9 +2,9 @@
 title: Installing CRAL
 description: Get started by installing CRAL on your machine.
 published: true
-date: 2020-06-16T15:56:00.463Z
+date: 2020-06-16T15:56:02.377Z
 tags: 
-editor: markdown
+editor: undefined
 ---
 
 ## Requirements

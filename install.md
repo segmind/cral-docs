@@ -2,9 +2,9 @@
 title: Installation 
 description: How to install CRAL
 published: true
-date: 2020-07-12T07:56:52.362Z
+date: 2020-07-16T12:30:52.251Z
 tags: 
-editor: markdown
+editor: undefined
 ---
 
 > Before going any further, make sure you meet all the [requirements](/install/requirements).
@@ -13,11 +13,11 @@ editor: markdown
 ## By Platform
 - [Docker](/install/docker)
 - [Linux](/install/linux)
-- [Windows](/install/windows)
+- [Windows <sup>Coming Soon</sup>](/install/windows)
 {.links-list}
  
  ## Pre-built Cloud Images
-- [On Google Colab *Notebook to get started with CRAL*](https://colab.research.google.com/drive/11YBNHw6YwOkuOy8Z4muKsVPyQ4n3CO_b?usp=sharing)
+- [On Google Colab *Notebook to get started with CRAL*](/notebooks)
 - [On AWS EC2 *Use the free Marketplace Image*]()
 {.links-list}
 - [On Microsoft Azure *Use the free Marketplace Image*]()
