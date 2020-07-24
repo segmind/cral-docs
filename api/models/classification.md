@@ -2,7 +2,7 @@
 title: Classification models
 description: List of all the image classification models
 published: true
-date: 2020-07-24T06:14:39.401Z
+date: 2020-07-24T06:16:30.674Z
 tags: 
 editor: markdown
 ---
@@ -238,7 +238,7 @@ cral.models.classification.DarkNet53(*args, **kwargs)
 |**classes**|int|1000|(*optional*) number of classes to classify images into|
 |**classifier_activation**|string or callable|`softmax`|The activation function to use on the "top" layer|
 
-**Model source**
+## Model source
 | Model | Source |
 | -- | -- |
 | `DenseNet` `InceptionResNetV2` `InceptionV3` `MobileNet` `MobileNetV2` `NASNET` `ResNet` `ResNetV2` `VGG` `Xception` `EfficientNet`| [Keras Applications](https://keras.io/api/applications/) | 
