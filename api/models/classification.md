@@ -2,9 +2,9 @@
 title: Classification models
 description: List of all the image classification models
 published: true
-date: 2020-07-16T09:15:18.301Z
+date: 2020-07-24T06:12:34.944Z
 tags: 
-editor: undefined
+editor: markdown
 ---
 
 ## DenseNet (121, 169, 201)
@@ -28,6 +28,7 @@ cral.models.classification.DenseNet201(*args, **kwargs)
 
 ## InceptionResNetV2
 Instantiates the InceptionResNetV2 architecture.
+
 ```py
 cral.models.classification.InceptionResNetV2(*args, **kwargs)
 ```
@@ -237,6 +238,10 @@ cral.models.classification.DarkNet53(*args, **kwargs)
 |**classes**|int|1000|(*optional*) number of classes to classify images into|
 |**classifier_activation**|string or callable|`softmax`|The activation function to use on the "top" layer|
 
----
+**Model source**
+| Model | Source |
+| -- | -- |
+| `DenseNet` `InceptionResNetV2` `InceptionV3` `MobileNet` `MobileNetV2` `NASNET` `ResNet` `ResNetV2` `VGG` `Xception` `EfficientNet`| [Keras Applications](https://keras.io/api/applications/) | 
+|`DarkNet53` | 
 
 
