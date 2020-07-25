@@ -11,7 +11,7 @@ editor: undefined
 # [RetinaNet](https://arxiv.org/abs/1708.02002)
 Instantiates the retinanet architecture. 
 
-| Backbones supported | `ResNet50` `ResNet101` `ResNet152` `DenseNet121` `DenseNet169` `DenseNet201`|
+| Backbones supported | `ResNet50` `ResNet101` `ResNet152` `DenseNet121` `DenseNet169` `DenseNet201` `Detnet`|
 | -- | --| 
 
 

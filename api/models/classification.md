@@ -238,10 +238,31 @@ cral.models.classification.DarkNet53(*args, **kwargs)
 |**classes**|int|1000|(*optional*) number of classes to classify images into|
 |**classifier_activation**|string or callable|`softmax`|The activation function to use on the "top" layer|
 
+
+---
+
+## Detnet
+Instantiates the Detnet architecture.
+```py
+cral.models.classification.Detnet(*args, **kwargs)
+```
+**Arguments**
+| Name                  | Type        | Default     | Description                            |
+| :---: | :----: | :---: | :---: |
+|**include_top**|bool|False|Flag for fully-connected prediction layer at the top of the network|
+|**weights**|string|`imagenet`|One of `None`,`imagenet` or the path to the weights file|
+|**input_tensor**|Tensor|None|(*optional*) Keras tensor to use as image input for the model|
+|**input_shape**|tuple|None|(*optional*) Shape tuple E.g. `(224, 224, 3)` would be valid|
+|**pooling**|string|None|One of `None` ,`avg` or `max`|
+|**classes**|int|1000|(*optional*) number of classes to classify images into|
+|**classifier_activation**|string or callable|`softmax`|The activation function to use on the "top" layer|
+
+
 ## Model source
 | Model | Source |
 | -- | -- |
 | `DenseNet` `InceptionResNetV2` `InceptionV3` `MobileNet` `MobileNetV2` `NASNET` `ResNet` `ResNetV2` `VGG` `Xception` `EfficientNet`| [Keras Applications](https://keras.io/api/applications/) | 
 |`DarkNet53` |  [Github](https://github.com/qqwweee/keras-yolo3) |
+|`Detnet` |  [Github](https://github.com/becauseofAI/DetNet-Keras/blob/master/detnet59.py) |
 
 
