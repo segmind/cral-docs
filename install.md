@@ -2,7 +2,7 @@
 title: Installation 
 description: How to install CRAL
 published: true
-date: 2020-07-25T19:10:04.288Z
+date: 2020-07-25T19:19:35.267Z
 tags: 
 editor: markdown
 ---
@@ -11,7 +11,7 @@ editor: markdown
 {.is-info}
 
 ## By Platform
-The following pages contain platform-specific instructions for installinging CRAL.
+The following pages contain platform-specific instructions for installing CRAL.
 - [Docker](/install/docker)
 - [Linux](/install/linux)
 - [Windows <sup>(Coming soon)</sup>](/install/windows)
