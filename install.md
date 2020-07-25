@@ -2,18 +2,19 @@
 title: Installation 
 description: How to install CRAL
 published: true
-date: 2020-07-16T12:30:52.251Z
+date: 2020-07-25T19:10:04.288Z
 tags: 
-editor: undefined
+editor: markdown
 ---
 
-> Before going any further, make sure you meet all the [requirements](/install/requirements).
+> Make sure you meet all the hardware and software [requirements](/install/requirements) before you proceed.
 {.is-info}
 
 ## By Platform
+The following pages contain platform-specific instructions for installinging CRAL.
 - [Docker](/install/docker)
 - [Linux](/install/linux)
-- [Windows <sup>Coming Soon</sup>](/install/windows)
+- [Windows <sup>(Coming soon)</sup>](/install/windows)
 {.links-list}
  
  ## Pre-built Cloud Images
@@ -23,6 +24,6 @@ editor: undefined
 - [On Microsoft Azure *Use the free Marketplace Image*]()
 {.links-list}
 
-## Other Guides
+## Other Resources
 - [Docker — Containerization for Data Scientists](https://medium.com/towards-artificial-intelligence/docker-container-and-data-scientist-bae208ce8268)
 {.links-list}
