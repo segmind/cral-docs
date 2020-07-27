@@ -2,19 +2,19 @@
 title: Release Notes
 description: Version update notes for CRAL
 published: true
-date: 2020-07-27T08:32:08.855Z
+date: 2020-07-27T08:34:49.608Z
 tags: 
 editor: markdown
 ---
 
 # Release Notes
-
-## 0.2.0
-<small>July 17, 2020</small>
+## 0.2.2 (planned)
 **Features**
-1. Added 11 classification networks
-1. Added OD network RetinaNet with 3 backbones (Resnet 50, 101, 152)
-1. Added Pipeline - Classification and Object Detection
+1. Add object detection network: Yolo V3
+1. Add coco metrics API for object detection
+
+**Bug fixes**
+1. Fix artifacts logging.
 
 ## 0.2.1
 <small>July 27, 2020</small>
@@ -27,11 +27,13 @@ editor: markdown
 **Bug fixes**
 1. [OD] Added negative images (images without annotations) to training.
 
-## 0.2.2 (planned)
-**Features**
-1. Add object detection network: Yolo V3
-1. Add coco metrics API for object detection
 
-**Bug fixes**
-1. Fix artifacts logging.
+## 0.2.0
+<small>July 17, 2020</small>
+**Features**
+1. Added 11 classification networks
+1. Added OD network RetinaNet with 3 backbones (Resnet 50, 101, 152)
+1. Added Pipeline - Classification and Object Detection
+
+
 
