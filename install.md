@@ -2,13 +2,19 @@
 title: Installation 
 description: How to install CRAL
 published: true
-date: 2020-08-03T10:36:18.441Z
+date: 2020-08-03T10:39:00.311Z
 tags: 
 editor: markdown
 ---
 
 > Make sure you meet all the hardware and software [requirements](/install/requirements) before you proceed.
 {.is-info}
+
+## Quick install
+
+```
+pip3 install cral
+```
 
 ## By Platform
 The following pages contain platform-specific instructions for installing CRAL.
