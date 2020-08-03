@@ -2,7 +2,7 @@
 title: Installation 
 description: How to install CRAL
 published: true
-date: 2020-07-25T19:19:35.267Z
+date: 2020-08-03T08:35:38.406Z
 tags: 
 editor: markdown
 ---
@@ -18,7 +18,11 @@ The following pages contain platform-specific instructions for installing CRAL.
 {.links-list}
  
  ## Pre-built Cloud Images
+ ### Free
 - [On Google Colab *Notebook to get started with CRAL*](/notebooks)
+{.links-list}
+
+### Paid
 - [On AWS EC2 *Use the free Marketplace Image*]()
 {.links-list}
 - [On Microsoft Azure *Use the free Marketplace Image*]()
