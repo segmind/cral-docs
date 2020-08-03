@@ -2,7 +2,7 @@
 title: Installation 
 description: How to install CRAL
 published: true
-date: 2020-08-03T08:35:38.406Z
+date: 2020-08-03T10:36:18.441Z
 tags: 
 editor: markdown
 ---
