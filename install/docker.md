@@ -2,7 +2,7 @@
 title: Docker
 description: Installing CRAL using a Docker image
 published: true
-date: 2020-08-03T10:58:51.408Z
+date: 2020-08-03T11:02:02.885Z
 tags: 
 editor: markdown
 ---
@@ -16,7 +16,7 @@ editor: markdown
 
 The following procedure describes how to use CRAL on a docker image. Once you run the command below, docker will pull the image and start a jupyter notebook instance for you. 
 
-### Start Docker
+### 1. Start a docker container from the image 
 ```
 sudo docker run --gpus all -it -v /home/ubuntu:/mnt/myspace -p 8888:8888 segmind/cral:tf2.2-jupyter
 ```
