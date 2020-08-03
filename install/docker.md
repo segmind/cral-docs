@@ -2,7 +2,7 @@
 title: Docker
 description: Installing CRAL using a Docker image
 published: true
-date: 2020-08-03T10:51:00.075Z
+date: 2020-08-03T10:53:53.322Z
 tags: 
 editor: markdown
 ---
@@ -21,22 +21,23 @@ The following procedure describes how to use CRAL on a docker image. Once you ru
 sudo docker run --gpus all -it -v /home/ubuntu:/mnt/myspace -p 8888:8888 segmind/cral:tf2.2-jupyter
 ```
 
-**Notebook URL:** Once the docker starts, you will see the notebook URL along with the token on the terminal as shown below.
+**Notebook URL:** Once the docker starts, you will see the notebook URL along with the token on the terminal as shown below. Copy/paste the link in a browser to create and run notebooks on your machine.
+
 ```
 The Jupyter Notebook is running at:
 http://127.0.0.1:8888/?token=xxxxx
 ```
-Open the above link in a browser to create and run notebooks on your machine.
 
-> Note that the NVIDIA Driver and NVIDIA Container Toolkit are needed to add NVIDIA® GPU support to Docker.
-{.is-warning}
 
-### Manually start Jupyter
-You can append `bash` to the above command to enter into bash mode. This will not start the Jupyter notebook.
-Once you are inside the Docker environment, run the following command to start a jupyter-notebook session.
+#### Manually start Jupyter
+If you open the docker in bash mode (adding `bash` to the `docker run` will run a docker in bash mode), you'll need to manually start Jupyter. Once you are inside the Docker environment, run the following command to start a jupyter-notebook session.
 ```
 jupyter-notebook --port=8888 --ip=0.0.0.0 --allow-root
 ```
+
+
+> Note that the NVIDIA Driver and NVIDIA Container Toolkit are needed to add NVIDIA® GPU support to Docker.
+{.is-warning}
 
 
 
