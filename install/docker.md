@@ -2,7 +2,7 @@
 title: Docker
 description: Installing CRAL using a Docker image
 published: true
-date: 2020-08-03T10:58:41.033Z
+date: 2020-08-03T10:58:51.408Z
 tags: 
 editor: markdown
 ---
@@ -41,7 +41,7 @@ jupyter-notebook --port=8888 --ip=0.0.0.0 --allow-root
 
 ---
 
-## Installing NVIDIA Container Toolkit for GPU Support
+### Installing NVIDIA Container Toolkit for GPU Support
 To install the NVIDIA Container Toolkit for Ubuntu 16.04/18.04, run the following commands.
 
 ```
