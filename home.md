@@ -2,7 +2,7 @@
 title: CNN Research Abstraction Library
 description: Build better computer vision models faster with less code.
 published: true
-date: 2020-08-03T06:38:45.822Z
+date: 2020-08-03T08:34:29.080Z
 tags: 
 editor: markdown
 ---
@@ -21,7 +21,7 @@ Our aim is also to make it easier to reproduce and extend the results of various
 
 ## Components
 
-CRAL has a modular design to enable you to use each of its components independently, Alternatively, you can use the pipeline components to get started with your  
+CRAL has a modular design to enable you to use each of its components independently, Alternatively, you can use the pipeline to get started quickly with multiple networks out-of-the-box.
 
 | Components | Methods | Description |
 |---|---|---|
