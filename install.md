@@ -2,7 +2,7 @@
 title: Installation 
 description: How to install CRAL
 published: true
-date: 2020-08-03T10:39:00.311Z
+date: 2020-08-03T10:40:07.729Z
 tags: 
 editor: markdown
 ---
@@ -11,7 +11,7 @@ editor: markdown
 {.is-info}
 
 ## Quick install
-
+Run the following command to install CRAL via PyPI.
 ```
 pip3 install cral
 ```
