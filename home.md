@@ -2,7 +2,7 @@
 title: CNN Research Abstraction Library
 description: Build better computer vision models faster with less code.
 published: true
-date: 2020-07-25T18:40:43.127Z
+date: 2020-08-03T05:53:40.716Z
 tags: 
 editor: markdown
 ---
@@ -20,8 +20,11 @@ Our aim is also to make it easier to reproduce and extend the results of various
 **Reproducible:** To offer implementations that can easily be trained and reproduced on your own data.
 
 ## Components
+
+**CRAL Library components**
+
 | Components | Methods | Description |
 |---|---|---|
-| Tracking | [`Metrics`]() [`Parameters`]() [`Artifacts`]() [`Training Data`](/api/data-versioning) | Log and query your experiments. |
-| CNN models | [`Classification`](api/models/classification) [`Object Detection`](/api/models/ObjectDetection) [`Semantic Segmentation`]() | Ready to use implementations of SOTA algorithms. |
+| Tracking & Versioning | [`Metrics`](/api/tracking#log_metrics) [`Parameters`](/api/tracking#params) [`Artifacts`](/api/tracking#log_artifacts) [`Training Data`](/api/data-versioning) | Log and query your experiments. |
+| CNN models | [`Classification`](api/models/classification) [`Object Detection`](/api/models/ObjectDetection) [`Semantic Segmentation`]() | Ready to use implementations of State-of-the-art (SOTA) algorithms. |
 | Pipeline tools | [`Data Ingestion`]() [`Data Validation`]() | Load and validate your data before you start training. |
