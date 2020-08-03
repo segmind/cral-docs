@@ -2,11 +2,10 @@
 title: Object Detection Models
 description: List of Networks for Object Detection
 published: true
-date: 2020-07-21T14:08:13.745Z
+date: 2020-08-03T11:09:13.252Z
 tags: 
-editor: undefined
+editor: markdown
 ---
-
 
 # [RetinaNet](https://arxiv.org/abs/1708.02002)
 Instantiates the retinanet architecture. 
@@ -20,7 +19,7 @@ cral.models.object_detection.RetinanetConfig(*args, **kwargs)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
-| :---: | :----: | :---: | :---: |
+| --- | ---- | --- | --- |
 |**sizes**|list|[32, 64, 128, 256, 512]|List of sizes to use. Each size corresponds to one feature level|
 |**strides**|list|[8, 16, 32, 64, 128]|List of strides to use. Each stride correspond to one feature level|
 |**ratios**|list|[0.5, 1, 2]| List of ratios to use per location in a feature map|
@@ -41,7 +40,7 @@ cral.models.object_detection.Yolov3Config(*args, **kwargs)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
-| :---: | :----: | :---: | :---: |
+| --- | --- | --- | --- |
 |**size**|list|416|All Images will be resized to this size before being fed into the model|
 |**anchors**|list|.|List of Anchors with the same scale as size|
 |**anchor_masks**|list|.|List of Masks to be used with the anchors|
