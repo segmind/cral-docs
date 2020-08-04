@@ -2,7 +2,7 @@
 title: Release Notes
 description: Version update notes for CRAL
 published: true
-date: 2020-08-04T05:09:18.363Z
+date: 2020-08-04T05:16:27.876Z
 tags: 
 editor: markdown
 ---
