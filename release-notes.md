@@ -2,19 +2,20 @@
 title: Release Notes
 description: Version update notes for CRAL
 published: true
-date: 2020-07-27T08:34:49.608Z
+date: 2020-08-04T05:09:18.363Z
 tags: 
 editor: markdown
 ---
 
 # Release Notes
-## 0.2.2 (planned)
+## 0.2.2 
+<small>Aug 4, 2020</small>
 **Features**
-1. Add object detection network: Yolo V3
-1. Add coco metrics API for object detection
+1. Added object detection network: Yolo V3
+1. Added coco metrics API for object detection
 
 **Bug fixes**
-1. Fix artifacts logging.
+1. Fixed artifacts logging.
 
 ## 0.2.1
 <small>July 27, 2020</small>
