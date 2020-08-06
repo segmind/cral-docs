@@ -2,15 +2,40 @@
 title: CRAL-Vision
 description: This page gives a roadmap and vision for the CRAL library. CRAL is broadly divided into networks, modules and tools.
 published: true
-date: 2020-08-06T10:51:31.306Z
+date: 2020-08-06T10:58:46.818Z
 tags: 
 editor: ckeditor
 -->
 
 <p>Basic requirement for the networks is that all codes should be <strong>compatible with tf.2.2</strong> and above</p>
-<p><strong><u>Classification Networks</u></strong></p>
-<p>&nbsp;</p>
-<p><strong><u>Object Detection Networks</u></strong></p>
-<p><strong><u>Segmentation Networks</u></strong></p>
-<p><strong><u>Modules</u></strong></p>
-<p><strong><u>Tracking Tools</u></strong></p>
+<p><span class="text-big"><strong><u>Classification Networks</u></strong></span></p>
+<p>Development of classification networks for CRAL should follow the following protocol.</p>
+<ul>
+  <li>Find a Keras (tf.keras) implementation of the network,</li>
+  <li>Quick test on some dataset(less epochs)</li>
+  <li>Add it to cral.models.classification module</li>
+  <li>Add the keras definition in a .py file and put it cral→models→classification</li>
+  <li>Add alias of it int cral→models→__init__.py</li>
+  <li>Check that the implementation is working properly</li>
+  <li>Add to classification pipe&nbsp;</li>
+</ul>
+<p>Below are the list of classification networks for CRAL</p>
+<ul class="todo-list">
+  <li><label class="todo-list__label"><input class="todo-list__label__checkmark" type="checkbox" disabled="disabled"><span class="todo-list__label__description">DenseNet (121, 169, 201)</span></label></li>
+  <li><label class="todo-list__label"><input class="todo-list__label__checkmark" type="checkbox" disabled="disabled"><span class="todo-list__label__description">InceptionResNetV2</span></label></li>
+  <li><label class="todo-list__label"><input class="todo-list__label__checkmark" type="checkbox" disabled="disabled"><span class="todo-list__label__description">InceptionV3</span></label></li>
+  <li><label class="todo-list__label"><input class="todo-list__label__checkmark" type="checkbox" disabled="disabled"><span class="todo-list__label__description">MobileNet</span></label></li>
+  <li><label class="todo-list__label"><input class="todo-list__label__checkmark" type="checkbox" disabled="disabled"><span class="todo-list__label__description">MobileNetV2</span></label></li>
+  <li><label class="todo-list__label"><input class="todo-list__label__checkmark" type="checkbox" disabled="disabled"><span class="todo-list__label__description">NASNET (Large, Mobile)</span></label></li>
+  <li><label class="todo-list__label"><input class="todo-list__label__checkmark" type="checkbox" disabled="disabled"><span class="todo-list__label__description">ResNet (50, 101, 152)</span></label></li>
+  <li><label class="todo-list__label"><input class="todo-list__label__checkmark" type="checkbox" disabled="disabled"><span class="todo-list__label__description">ResNetV2 &nbsp;(50, 101, 152)</span></label></li>
+  <li><label class="todo-list__label"><input class="todo-list__label__checkmark" type="checkbox" disabled="disabled"><span class="todo-list__label__description">Xception</span></label></li>
+  <li><label class="todo-list__label"><input class="todo-list__label__checkmark" type="checkbox" disabled="disabled"><span class="todo-list__label__description">VGG (16,19)</span></label></li>
+  <li><label class="todo-list__label"><input class="todo-list__label__checkmark" type="checkbox" disabled="disabled"><span class="todo-list__label__description">EfficientNet (B0-B7)</span></label></li>
+  <li><label class="todo-list__label"><input class="todo-list__label__checkmark" type="checkbox" disabled="disabled"><span class="todo-list__label__description">Darknet53</span></label></li>
+  <li><label class="todo-list__label"><input class="todo-list__label__checkmark" type="checkbox" disabled="disabled"><span class="todo-list__label__description">DetNet</span></label></li>
+</ul>
+<p><span class="text-big"><strong><u>Object Detection Networks</u></strong></span></p>
+<p><span class="text-big"><strong><u>Segmentation Networks</u></strong></span></p>
+<p><span class="text-big"><strong><u>Modules</u></strong></span></p>
+<p><span class="text-big"><strong><u>Tracking Tools</u></strong></span></p>
