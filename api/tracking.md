@@ -2,9 +2,9 @@
 title: Tracking in CRAL
 description: Integrate experiment tracking to your deep learning project.
 published: true
-date: 2020-06-18T07:16:51.955Z
+date: 2020-08-07T10:44:05.322Z
 tags: 
-editor: undefined
+editor: markdown
 ---
 
 # cral.tracking
@@ -14,7 +14,7 @@ CRAL internally uses [MLFlow](https://mlflow.org/) to log your experiments.
 
 ## set_experiment
 ```py
-set_experiment(*args, **kwargs)
+set_experiment(id)
 ```
 **Arguments**
 | Name | Type | Default | Description |
