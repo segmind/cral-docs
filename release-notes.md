@@ -2,19 +2,20 @@
 title: Release Notes
 description: Version update notes for CRAL
 published: true
-date: 2020-08-11T11:05:45.731Z
+date: 2020-08-11T11:10:11.845Z
 tags: 
 editor: markdown
 ---
 
 # Release Notes
-## 0.2.3
+## 0.3.0
 <small>Aug 11, 2020</small>
 **Features**
 1. Segmentation Pipeline
 1. `Deeplabv3+` for semantic segemntation
 1. Log artifacts
 1. Auto upload checkpoints
+1. Upload `model.summary()` as artifact
 
 **Bug Fixes**
 1. Train `Yolov3` correctly on custom dataset
