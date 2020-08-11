@@ -2,9 +2,9 @@
 title: Classification Pipeline
 description: Pipeline for Image Classification task
 published: true
-date: 2020-07-16T12:23:44.545Z
+date: 2020-08-11T11:15:22.449Z
 tags: 
-editor: undefined
+editor: markdown
 ---
 
 # ClassificationPipe 
@@ -59,7 +59,7 @@ pipeline.set_algo(*args, **kwargs)
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
 |:---:|:---:|:---:|:---:|
-|feature_extractor| str , Keras Model|.| Can be a model name as Str or can be a keras model|
+|feature_extractor| str |.| has to be string indication feature extractor name|
 |config|MLPConfig|.| Can be used to configure the head of the Model|
 |weights|string|`imagenet`|one of `None` ,`imagenet`,or the path to the weights file
 |base_trainable| bool|False|(*optional*) If set False the base models layers will not be trainable useful fortransfer learning|
