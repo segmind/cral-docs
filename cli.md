@@ -2,15 +2,19 @@
 title: Command Line Interface
 description: CRAL Command Line Interface
 published: true
-date: 2020-07-16T20:43:21.885Z
+date: 2020-08-12T15:11:05.672Z
 tags: 
-editor: undefined
+editor: markdown
 ---
 
-# Cral Config
-Cral needs to be Configured with `cral config` after installing the library 
-Only then will the Tracking of the runs be possible
-This only needs to be done once
+# Command Line Interface
+
+## config
+CRAL needs to be configured with your Segmind account to track your runs. This only needs to be done once.
+
+Command: `cral config`
+
+Usage:
 ```Shell
 > cral config
 Please enter your credentials for https://track.segmind.com
