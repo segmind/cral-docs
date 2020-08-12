@@ -2,7 +2,7 @@
 title: Docker
 description: Installing CRAL using a Docker image
 published: true
-date: 2020-08-12T14:55:43.080Z
+date: 2020-08-12T14:56:47.689Z
 tags: 
 editor: markdown
 ---
@@ -17,7 +17,7 @@ editor: markdown
 >For instructions on installing Docker, please see this [post](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04) on Digitalocean. You can learn more about Docker here: [Docker — Containerization for Data Scientists](https://medium.com/towards-artificial-intelligence/docker-container-and-data-scientist-bae208ce8268).
 {.is-info}
 
-The following procedure describes how to use CRAL on a Docker image. Once you run the command below, Docker will pull the image and start a jupyter notebook instance for you. 
+The following procedure describes how to use CRAL on a Docker image. Once you run the command below, Docker will pull the image and start a Jupyter notebook instance for you. 
 
 ### Start a docker container from the image 
 ```
@@ -33,7 +33,7 @@ http://127.0.0.1:8888/?token=xxxxx
 
 
 **Manually start Jupyter**
-If you open the docker in bash mode (adding `bash` to the `docker run` will run a Docker in bash mode), you'll need to manually start Jupyter. Once you are inside the Docker environment, run the following command to start a jupyter-notebook session.
+If you open the docker in bash mode (adding `bash` to the `docker run` will run a Docker in bash mode), you'll need to manually start Jupyter. Once you are inside the Docker environment, run the following command to start a Jupyter notebook session.
 ```
 jupyter-notebook --port=8888 --ip=0.0.0.0 --allow-root
 ```
