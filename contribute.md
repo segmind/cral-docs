@@ -2,7 +2,7 @@
 title: Contribute
 description: How to contribute to CRAL
 published: true
-date: 2020-08-12T07:31:15.931Z
+date: 2020-08-12T07:50:07.720Z
 tags: 
 editor: markdown
 ---
@@ -23,7 +23,10 @@ You can contribute to CRAL under the following categories:
 - TensorFlow 2.2+
 
 ## Roadmap
-Refer to this [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vRaLketbBCL-9KrqSvEWYt96r3UC-Oof9Negm2oupUveaG1LdP0y-xxn6gemYUW-U_M7i-4M9NA_st8/pubhtml?gid=445074022&single=true).
+Refer to this following link
+
+- [Network landscape](https://docs.google.com/spreadsheets/d/e/2PACX-1vRaLketbBCL-9KrqSvEWYt96r3UC-Oof9Negm2oupUveaG1LdP0y-xxn6gemYUW-U_M7i-4M9NA_st8/pubhtml)
+{.links-list}
 
 ## Contribution checklist
 ### Coding style
