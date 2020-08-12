@@ -2,7 +2,7 @@
 title: Tracking in CRAL
 description: Integrate experiment tracking to your deep learning project.
 published: true
-date: 2020-08-07T10:44:05.322Z
+date: 2020-08-12T10:20:22.325Z
 tags: 
 editor: markdown
 ---
@@ -25,7 +25,8 @@ set_experiment(id)
 Log a set of parameters for the current run. 
 [](log_param)
 ```py
-log_params(*args, **kwargs)
+parameter_dict = {'key1':10, 'key2':20}
+log_params(parameter_dict)
 ```
 **Arguments**
 | Name | Type | Default | Description |
@@ -35,7 +36,8 @@ log_params(*args, **kwargs)
 ## log_metrics
 Log multiple metrics for the current run. 
 ```py
-log_metrics(*args, **kwargs)
+metric_dict = {'metric1':1, 'metric2':1e-2}
+log_metrics(metrics=metric_dict, step=1)
 ```
 
 **Arguments**
@@ -44,17 +46,17 @@ log_metrics(*args, **kwargs)
 | metrics | dict | | Dictionary of metrics. metric_name -> value |
 | step | Int | 0 | Step at which to log the specified metrics. |
 
-## log_artifacts
+## log_artifact
 Log all the contents of a local directory as artifacts of the run. 
 ```py
-log_artifacts(*args, **kwargs)
+log_artifact(key, path)
 ```
 
 **Arguments**
 | Name | Type | Default | Description |
 |---|---|---|---|
-| metrics | dict | | Dictionary of metrics. metric_name -> value |
-| step | Int | 0 | Step at which to log the specified metrics. |
+| key | str | | name of the artifact |
+| path | str | | path to the artifact file |
 
 ## KerasCallback
 Callback for auto-logging metrics and parameters. Records available logs after each epoch. Records model structural information as params when training begins
