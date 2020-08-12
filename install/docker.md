@@ -2,7 +2,7 @@
 title: Docker
 description: Installing CRAL using a Docker image
 published: true
-date: 2020-08-12T14:57:57.520Z
+date: 2020-08-12T15:00:06.074Z
 tags: 
 editor: markdown
 ---
@@ -19,12 +19,12 @@ editor: markdown
 
 The following procedure describes how to use CRAL on a Docker image. Once you run the command below, Docker will pull the image and start a Jupyter notebook instance for you. 
 
-### Start a docker container from the image 
+### Start a docker container from the image
 ```
 sudo docker run --gpus all -it -v /home/ubuntu:/mnt/myspace -p 8888:8888 segmind/cral:tf2.2-jupyter
 ```
 
-**Notebook URL:** Once the Docker starts, you will see the notebook URL along with the token on the terminal as shown below. Copy/paste the link in a browser to create and run notebooks on your machine.
+**Notebook URL:** Once the Docker container starts, you will see the notebook URL along with the token on the terminal as shown below. Copy/paste the link in a browser to create and run notebooks on your machine.
 
 ```
 The Jupyter Notebook is running at:
@@ -33,7 +33,7 @@ http://127.0.0.1:8888/?token=xxxxx
 
 
 **Manually start Jupyter**
-If you open the docker in bash mode (adding `bash` to the `docker run` will run a Docker in bash mode), you'll need to manually start Jupyter. Once you are inside the Docker environment, run the following command to start a Jupyter notebook session.
+If you start the Docker container in bash mode (adding `bash` to the `docker run` will start Docker container in bash mode), you'll need to manually start Jupyter. Once you are inside the Docker environment, run the following command to start a Jupyter notebook session.
 ```
 jupyter-notebook --port=8888 --ip=0.0.0.0 --allow-root
 ```
