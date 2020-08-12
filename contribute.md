@@ -2,7 +2,7 @@
 title: Contribute
 description: How to contribute to CRAL
 published: true
-date: 2020-08-12T06:49:30.376Z
+date: 2020-08-12T07:02:45.853Z
 tags: 
 editor: markdown
 ---
@@ -29,5 +29,4 @@ You can contribute to CRAL under the following categories:
 Coming soon
 
 ## Roadmap
-
-
+Refer to this [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vRaLketbBCL-9KrqSvEWYt96r3UC-Oof9Negm2oupUveaG1LdP0y-xxn6gemYUW-U_M7i-4M9NA_st8/pubhtml?gid=445074022&single=true).
