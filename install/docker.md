@@ -2,13 +2,16 @@
 title: Docker
 description: Installing CRAL using a Docker image
 published: true
-date: 2020-08-03T11:02:02.885Z
+date: 2020-08-12T14:54:34.119Z
 tags: 
 editor: markdown
 ---
 
 > Make sure you meet all the hardware and software [requirements](/install/requirements) before you proceed.
 {.is-info}
+
+> Note that the NVIDIA Container Toolkit is needed to add NVIDIA® GPU support to Docker.
+{.is-warning}
 # Installing CRAL using a Docker image
 
 >For instructions on installing Docker, please see this [post](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04) on Digitalocean. You can learn more about Docker here: [Docker — Containerization for Data Scientists](https://medium.com/towards-artificial-intelligence/docker-container-and-data-scientist-bae208ce8268).
@@ -16,7 +19,7 @@ editor: markdown
 
 The following procedure describes how to use CRAL on a docker image. Once you run the command below, docker will pull the image and start a jupyter notebook instance for you. 
 
-### 1. Start a docker container from the image 
+### Start a docker container from the image 
 ```
 sudo docker run --gpus all -it -v /home/ubuntu:/mnt/myspace -p 8888:8888 segmind/cral:tf2.2-jupyter
 ```
@@ -36,12 +39,10 @@ jupyter-notebook --port=8888 --ip=0.0.0.0 --allow-root
 ```
 
 
-> Note that the NVIDIA Driver and NVIDIA Container Toolkit are needed to add NVIDIA® GPU support to Docker.
-{.is-warning}
-
 ---
+# Resources
 
-### Installing NVIDIA Container Toolkit for GPU Support
+**Installing NVIDIA Container Toolkit for GPU Support**
 To install the NVIDIA Container Toolkit for Ubuntu 16.04/18.04, run the following commands.
 
 ```
