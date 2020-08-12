@@ -2,7 +2,7 @@
 title: Command Line Interface
 description: CRAL Command Line Interface
 published: true
-date: 2020-08-12T15:11:05.672Z
+date: 2020-08-12T15:12:47.489Z
 tags: 
 editor: markdown
 ---
@@ -14,7 +14,7 @@ CRAL needs to be configured with your Segmind account to track your runs. This o
 
 Command: `cral config`
 
-Usage:
+**Example:**
 ```Shell
 > cral config
 Please enter your credentials for https://track.segmind.com
