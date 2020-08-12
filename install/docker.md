@@ -2,7 +2,7 @@
 title: Docker
 description: Installing CRAL using a Docker image
 published: true
-date: 2020-08-12T14:56:47.689Z
+date: 2020-08-12T14:57:57.520Z
 tags: 
 editor: markdown
 ---
