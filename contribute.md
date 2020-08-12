@@ -2,7 +2,7 @@
 title: Contribute
 description: How to contribute to CRAL
 published: true
-date: 2020-08-12T07:50:07.720Z
+date: 2020-08-12T07:50:57.154Z
 tags: 
 editor: markdown
 ---
@@ -25,7 +25,8 @@ You can contribute to CRAL under the following categories:
 ## Roadmap
 Refer to this following link
 
-- [Network landscape](https://docs.google.com/spreadsheets/d/e/2PACX-1vRaLketbBCL-9KrqSvEWYt96r3UC-Oof9Negm2oupUveaG1LdP0y-xxn6gemYUW-U_M7i-4M9NA_st8/pubhtml)
+- [Networks/Algo lists](https://docs.google.com/spreadsheets/d/e/2PACX-1vRaLketbBCL-9KrqSvEWYt96r3UC-Oof9Negm2oupUveaG1LdP0y-xxn6gemYUW-U_M7i-4M9NA_st8/pubhtml)
+- [Trello - Current Pipeline ]()
 {.links-list}
 
 ## Contribution checklist
