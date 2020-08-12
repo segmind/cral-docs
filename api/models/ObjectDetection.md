@@ -2,7 +2,7 @@
 title: Object Detection Models
 description: List of Networks for Object Detection
 published: true
-date: 2020-08-12T09:26:24.525Z
+date: 2020-08-12T09:27:06.428Z
 tags: 
 editor: markdown
 ---
@@ -45,11 +45,11 @@ Instantiates the YoloV3 architecture.
 
 ```py
 cral.models.object_detection.YoloV3Config(
-			size, 
-      anchors, 
-      anchor_masks, 
-      iou_threshold, 
-      score_threshold)
+    size, 
+    anchors, 
+    anchor_masks, 
+    iou_threshold, 
+    score_threshold)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
