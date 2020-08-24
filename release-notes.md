@@ -2,7 +2,7 @@
 title: Release Notes
 description: Version update notes for CRAL
 published: true
-date: 2020-08-24T06:15:30.781Z
+date: 2020-08-24T06:16:53.792Z
 tags: 
 editor: markdown
 ---
@@ -11,14 +11,8 @@ editor: markdown
 ## 0.3.1
 <small> August 24, 2020 </small>
 **Features**
-  1. Added Unet
-  	 Backbones: Vgg16, 19
-     Resnet50, 101,152
-  	 Mobilenet
-  2. Added PSPnet: 
-  Backbones - Resnet50, 101, 152, 50v2, 101v2, 152v2
-	Vgg16, Vgg19
-	Mobilenet, Mobilenetv2 backbones added
+  1. Added Unet (Backbones: Vgg16, 19, Resnet50, 101,152, Mobilenet)
+  2. Added PSPnet (Backbones - Resnet50, 101, 152, 50v2, 101v2, 152v2,Vgg16, Vgg19, Mobilenet, Mobilenetv2)
 
 ## 0.3.0
 <small>Aug 11, 2020</small>
