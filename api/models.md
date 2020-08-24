@@ -2,7 +2,7 @@
 title: Models
 description: Model library for common DLCV tasks such as classification, detection, segmentation and more.
 published: true
-date: 2020-08-24T05:16:05.929Z
+date: 2020-08-24T05:28:38.244Z
 tags: 
 editor: markdown
 ---
