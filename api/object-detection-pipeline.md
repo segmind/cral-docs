@@ -2,9 +2,9 @@
 title: Object Detection Pipeline
 description: 
 published: true
-date: 2020-07-16T20:44:54.336Z
+date: 2020-08-24T10:07:17.264Z
 tags: 
-editor: undefined
+editor: markdown
 ---
 
 # ObjectDetectionPipe 
@@ -21,7 +21,7 @@ pipeline.add_data(*args, **kwargs)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
-|:---:|:---:|:---:|:---:|
+|---|---|---|---|
 |**train_images_dir**| str |.|path to training images|
 |**train_anno_dir**| str |.|path to training annotations|
 |**annotation_format**|str|.| one of `yolo` , `coco` or `pascal_voc`
