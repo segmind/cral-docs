@@ -2,7 +2,7 @@
 title: Object Detection Pipeline
 description: 
 published: true
-date: 2020-08-24T10:07:17.264Z
+date: 2020-08-24T10:08:14.134Z
 tags: 
 editor: markdown
 ---
@@ -48,7 +48,7 @@ pipeline.set_algo(*args, **kwargs)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
-|:---:|:---:|:---:|:---:|
+|---|---|---|---|
 |**feature_extractor**| str |.|Name of the backbone for the object detection ([classification networks](https://cral.segmind.com/api/models/classification))|
 |**config**| Config |.|[Config](https://cral.segmind.com/api/models/ObjectDetection) object of the Object Detection Model|
 |**weights**|string|`imagenet`|One of `None`,`imagenet` or the path to the weights file|
@@ -68,7 +68,7 @@ pipeline.train(*args, **kwargs)
 
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
-|:---:|:---:|:---:|:---:|
+|---|---|---|---|
 |**num_epochs**|int|.| number of epochs to run training on|
 |**snapshot_prefix**| str|.|prefix to assign to the checkpoint file
 |**snapshot_path**| str|.|a valid folder path where the checkpoints are to be stored
@@ -92,7 +92,7 @@ pipeline.prediction_model(*args, **kwargs)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
-|:---:|:---:|:---:|:---:|
+|---|---|---|---|
 |checkpoint_path |str|.| Path to the checkpoint where the trained model is stored
 
 
