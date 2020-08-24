@@ -2,7 +2,7 @@
 title: Object Detection Pipeline
 description: 
 published: true
-date: 2020-08-24T10:08:14.134Z
+date: 2020-08-24T10:10:04.224Z
 tags: 
 editor: markdown
 ---
