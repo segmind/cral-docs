@@ -20,9 +20,9 @@ cral.models.semantic_segmentation.Deeplabv3Config(
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
 | --- | --- | --- | --- |
-|**height**|int|-|Input shape dimension|
-|**width**|int|-|Input shape dimension|
-|**output_stride**|int|-|Ratio of the input image size to the output feature map size|
+|**height**|int|576|Input shape dimension|
+|**width**|int|576|Input shape dimension|
+|**output_stride**|int|8|Ratio of the input image size to the output feature map size|
 
 
 ---
@@ -41,8 +41,8 @@ cral.models.semantic_segmentation.UNetConfig(
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
 | --- | --- | --- | --- |
-|**height**|int|-|Input shape dimension|
-|**width**|int|-|Input shape dimension|
+|**height**|int|576|Input shape dimension|
+|**width**|int|576|Input shape dimension|
 
 ---
 
@@ -60,8 +60,8 @@ cral.models.semantic_segmentation.PspNetConfig(
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
 | --- | --- | --- | --- |
-|**height**|int|-|Input shape dimension|
-|**width**|int|-|Input shape dimension|
+|**height**|int|576|Input shape dimension|
+|**width**|int|576|Input shape dimension|
 |**down_sample_factor**|int|8|Ratio of the input image size to the smallest feature map size generated|
 
 
