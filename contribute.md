@@ -2,7 +2,7 @@
 title: Contribute
 description: How to contribute to CRAL
 published: true
-date: 2020-08-25T08:58:03.976Z
+date: 2020-08-25T09:57:48.440Z
 tags: 
 editor: markdown
 ---
@@ -30,6 +30,12 @@ Refer to this following link
 {.links-list}
 
 ## Contribution checklist
+
+### Pre-requisite
+before beginning your contribution you should have the following skills
+- creating python [modules](https://docs.python.org/3/tutorial/modules.html#packages)
+- [packaging](https://packaging.python.org/tutorials/packaging-projects/) python projects
+- python [import](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html) statements
 ### Coding style
 Coming soon
 
