@@ -2,17 +2,17 @@
 title: Release Notes
 description: Version update notes for CRAL
 published: true
-date: 2020-08-24T06:17:26.428Z
+date: 2020-08-27T08:10:43.959Z
 tags: 
 editor: markdown
 ---
 
 # Release Notes
 ## 0.3.1
-<small> August 24, 2020 </small>
+<small> August 27, 2020 </small>
 **Features**
-  1. Added Unet (Backbones: Vgg16, 19, Resnet50, 101,152, Mobilenet)
-  2. Added PSPnet (Backbones - Resnet50, 101, 152, 50v2, 101v2, 152v2, Vgg16, Vgg19, Mobilenet, Mobilenetv2)
+  1. Added `Unet` (Backbones: Vgg16, 19, Resnet50, 101,152, Mobilenet)
+  2. Added `PSPnet` (Backbones - Resnet50, 101, 152, 50v2, 101v2, 152v2, Vgg16, Vgg19, Mobilenet, Mobilenetv2)
 
 ## 0.3.0
 <small>Aug 11, 2020</small>
@@ -37,7 +37,7 @@ editor: markdown
 ## 0.2.1
 <small>July 27, 2020</small>
 **Features**
-1. DenseNet (121, 169, 201) & DetNet added as backbones for RetinaNet
+1. `DenseNet` (121, 169, 201) & `DetNet` added as backbones for RetinaNet
 1. Support for RGBA data (ignore alpha channel)
 1. Now logging GPU Metrics & parameters.
 1. Multi GPU support for training
