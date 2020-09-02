@@ -2,7 +2,7 @@
 title: Contribute
 description: How to contribute to CRAL
 published: true
-date: 2020-08-25T10:03:20.326Z
+date: 2020-09-02T10:41:53.023Z
 tags: 
 editor: markdown
 ---
@@ -17,11 +17,41 @@ You can contribute to CRAL under the following categories:
 | Add/Update features | `Pipeline tools` `Data validation` `Data conversion` `Data ingesion` `Data versioning` | 
 | Bug fixes & other updates | `Bugs` `Performance updates` `Typos` `Documentation updates`|
 
-## Basic Requirements
-- Linux
-- Python 3.6+
-- TensorFlow 2.2+
+# NEW
+## **General Guidelines**
 
+1. Use [Flake8](https://pypi.org/project/flake8/) for Linter and [isort](https://pypi.org/project/isort/) to sort imports. Configs here [links to configs]. Link to *pre-commit config* here.
+2. Python 3.6+
+3. All Implimentations on Keras (tf.keras); TensorFlow version > 2.2.0
+
+## General **Workflow**
+
+Fork/Pull latest CRAL → Create a new branch from *avengers_assemble*) →Commit changes to the new branch →Send a pull request
+
+**Branch name examples:** *network/fasterrcnn, algo/group_normalization, alog/soft_nms, algo/coco_metrics_od* etc.
+
+## **Network/Model addition steps (cral.models)**
+
+1. Get to a working implimentation. Test it with multiple datasets (and HPs) before starting CRAL integration.
+2. Integration APIs blueprint [TODO add explanations and examples for each point @pratik /@aniket]
+    1. Sample model config
+    2. Model creator function
+    3. Model HPs logger
+    4. Final prediction model
+    5. Default Loss function
+3. Test for re-usable blocks that already exist in CRAL. (eg. usage of backbones from models.classification for models.od or models.seg)
+4. Create a re-usble blocks from the implimentation to make add more re-usable modules to CRAL. Start from step 1 for the re-usable module.
+5. Integrate to CRAL. Add docstring for each function. Add comments to make the code readable.
+6. Benchmark tests using cral.pipeline; logged to *Segmind Track.* Share the run/exp ID
+    1. Training time benchmark with standard datasets.
+    2. Accuracy benchmark with the paper.
+7. Update Documentation
+    1. Config structure
+    2. Important points about the network; eg: go to HPs, types of datasets it works well or does not work well.
+8. Create a notebook with usage and submit to cral-notebooks
+9. Adding more Backbones and MultiGPU support*
+
+# OLD
 ## General structure
 ![algo_contrib.png](/algo_contrib.png)
 
