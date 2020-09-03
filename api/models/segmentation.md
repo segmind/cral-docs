@@ -110,3 +110,13 @@ cral.models.semantic_segmentation.UnetPlusPlusConfig(
 
 
 ---
+
+
+## Model source
+| Model | Source |
+| -- | -- |
+|`Deeplabv3+` |  [Github](https://github.com/bonlime/keras-deeplab-v3-plus) |
+|`UNet` |  [Github](https://github.com/divamgupta/image-segmentation-keras) |
+|`PspNet` |  [Github](https://github.com/divamgupta/image-segmentation-keras) |
+|`SegNet` |  [Github](https://github.com/divamgupta/image-segmentation-keras) |
+|`UnetPlusPlus` |  [Github](https://github.com/CarryHJR/Nested-UNet) |
