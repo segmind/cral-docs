@@ -2,7 +2,7 @@
 title: Contributing a new object detection network
 description: guide to contribute a new model for object detection
 published: true
-date: 2020-09-06T16:15:30.285Z
+date: 2020-09-06T19:53:42.969Z
 tags: 
 editor: markdown
 ---
@@ -24,13 +24,43 @@ create a new branch from branch `cral-dev`.
 
 Suppose you want to integrate a new network called `DetectorPro` into cral. You need to make a new module called **Model** under **cral.object_detection** and prepare the endpoints below.
 
-- `DetectorProGenerator` - A generator based on tf.data api which takes in a ModelConfig Object and tfrecord paths, to creates groundtruths from them
-- `DetectorProConfig` - A class which stores all model specific hyper parameters
-- `DetectorPro_loss` - the default loss function
-- `log_model_config_params` - a function which takes in an object of ModelConfig and logs it to track
-- `create_training_model` - a function which takes in a tf.keras.Model object of a backbone and an object of ModelConfig and creates the training model
-- `create_inference_model` - a function that takes in a tf.keras.Model object of the training model and converts into prediction model
-- A checkpoint trained on a **chess-dataset**, this will be used later in unittest.
+### 1.1 DetectorProGenerator:
+A generator based on tf.data api which takes in a ModelConfig Object and tfrecord paths, to creates groundtruths from them.
+
+tfrecords are basically the serialized images and their annotation in protocol buffer format.
+Google highly recommends to use tfrecords along with tf.data api for best performance.
+
+the parser should be able to parse an example having the following fields:
+```
+feature={
+    'image/height': tf.train.Feature(int64_list=tf.train.Int64List(value=[height])),
+    'image/width': tf.train.Feature(int64_list=tf.train.Int64List(value=[width])),
+    'image/encoded': tf.train.Feature(bytes_list=tf.train.BytesList(value=[image_string])),
+    'image/object/bbox/xmin': tf.train.Feature(float_list=tf.train.FloatList(value=xmins)),
+    'image/object/bbox/xmax': tf.train.Feature(float_list=tf.train.FloatList(value=xmaxs)),
+    'image/object/bbox/ymin': tf.train.Feature(float_list=tf.train.FloatList(value=ymins)),
+    'image/object/bbox/ymax': tf.train.Feature(float_list=tf.train.FloatList(value=ymaxs)),
+    'image/f_id': tf.train.Feature(int64_list=tf.train.Int64List(value=[image_id])),
+    'image/object/class/label': tf.train.Feature(int64_list=tf.train.Int64List(value=labels)),
+}
+```
+
+### 1.2 DetectorProConfig
+A template class which stores all model hyper parameters specific to algorithm `DetectorPro`
+
+### 1.3 DetectorPro_loss:
+ the default loss function
+
+### 1.4 log_model_config_params: 
+a function which takes in an object of ModelConfig and logs it to track
+
+### 1.5 create_training_model:
+a function which takes in a tf.keras.Model object of a backbone and an object of ModelConfig and creates the training model
+
+### 1.6 create_inference_model:
+a function that takes in a tf.keras.Model object of the training model and converts into prediction model
+### 1.7 test checkpoint:
+A checkpoint trained on a **chess-dataset**, this will be used later in unittest.
 
 So after the above have been done we should be able to do:
 
