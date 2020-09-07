@@ -2,7 +2,7 @@
 title: Contributing a new object detection network
 description: guide to contribute a new model for object detection
 published: true
-date: 2020-09-07T09:02:56.919Z
+date: 2020-09-07T09:07:13.752Z
 tags: 
 editor: markdown
 ---
