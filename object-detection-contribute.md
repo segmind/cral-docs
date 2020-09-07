@@ -2,7 +2,7 @@
 title: Contributing a new object detection network
 description: guide to contribute a new model for object detection
 published: true
-date: 2020-09-06T19:53:42.969Z
+date: 2020-09-07T08:02:29.375Z
 tags: 
 editor: markdown
 ---
@@ -55,7 +55,29 @@ A template class which stores all model hyper parameters specific to algorithm `
 a function which takes in an object of ModelConfig and logs it to track
 
 ### 1.5 create_training_model:
-a function which takes in a tf.keras.Model object of a backbone and an object of ModelConfig and creates the training model
+
+```
+def training_model_vgg16(config, weights):
+		from cral.common import classification_networks    
+    base_model = classification_networks['vgg16']
+    
+    #construct rest of the model using base_model and config
+    
+def create_training_model(backbone, config, weights='imagenet):
+
+	assert isisntance(config, DetectorProconfig)
+  
+	if backbone == 'vgg16':
+     return training_model_vgg16(config, weights)
+
+	elif backbone == 'resnet50':
+     return training_model_resnet50(config, weights)
+```
+a function which takes in 3 arguments i.e `backbone, config and weights` and creates the training model.
+
+for each backbone supported by `DetectorPro`, there should be a function which builds tf.keras.Model of DetectorPro from the tf.keras.Model of the given backbone. PLease look at the example of function `training_model_vgg16`.
+
+NB: All backbone networks should be built from the dictionary `classification_networks` imported from `cral.common`
 
 ### 1.6 create_inference_model:
 a function that takes in a tf.keras.Model object of the training model and converts into prediction model
