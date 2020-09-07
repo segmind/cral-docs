@@ -2,7 +2,7 @@
 title: Contributing a new object detection network
 description: guide to contribute a new model for object detection
 published: true
-date: 2020-09-07T08:03:58.047Z
+date: 2020-09-07T09:02:56.919Z
 tags: 
 editor: markdown
 ---
@@ -59,7 +59,7 @@ a function which takes in an object of ModelConfig and logs it to track
 ```
 def training_model_vgg16(config, weights):
 		from cral.common import classification_networks    
-    base_model = classification_networks['vgg16']
+    base_model, preprocessing_function = classification_networks['vgg16']
     
     #construct rest of the model using base_model and config
     
