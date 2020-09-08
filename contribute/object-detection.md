@@ -2,12 +2,12 @@
 title: Contributing a new object detection network to CRAL
 description: Guide to contribute a new model for object detection
 published: true
-date: 2020-09-08T03:31:18.961Z
+date: 2020-09-08T04:38:05.159Z
 tags: 
 editor: markdown
 ---
 
-> Create a new branch from branch `cral-dev`. Suppose you want to integrate a new network called `DetectorPro`, you need to make a new module called **Model** under **cral.object_detection** and prepare the endpoints as shown below.
+> Create a new branch from branch `cral-dev`. Suppose you want to integrate a new network called `DetectorPro`, you need to make a new module called **DetectorPro** under **cral.object_detection** and prepare the endpoints as shown below.
 {.is-info}
 
 ## 1. Build Checklist
