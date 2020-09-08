@@ -2,7 +2,7 @@
 title: Contributing a new object detection network to CRAL
 description: Guide to contribute a new model for object detection
 published: true
-date: 2020-09-08T03:28:36.098Z
+date: 2020-09-08T03:31:18.961Z
 tags: 
 editor: markdown
 ---
@@ -10,7 +10,7 @@ editor: markdown
 > Create a new branch from branch `cral-dev`. Suppose you want to integrate a new network called `DetectorPro`, you need to make a new module called **Model** under **cral.object_detection** and prepare the endpoints as shown below.
 {.is-info}
 
-# Checklist
+## 1. Build Checklist
 
 ### 1.1 DetectorProGenerator
 A generator based on tf.data api which takes in a **ModelConfig** Object and **tfrecord** paths, to create groundtruth.
