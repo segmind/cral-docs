@@ -2,7 +2,7 @@
 title: Contributing a new segmentation network to CRAL
 description: Guide to contribute a new model for segmentation
 published: true
-date: 2020-09-08T08:38:44.633Z
+date: 2020-09-08T08:41:22.482Z
 tags: 
 editor: markdown
 ---
@@ -10,15 +10,17 @@ editor: markdown
 > Create a new branch from branch `cral-dev`. Suppose you want to integrate a new network called `SegmentorPro`, you need to make a new module called **SegmentorPro** under **cral.models.semantic_segmentation** and prepare the endpoints as shown below.
 {.is-info}
 
-## Checklist
-
-Suppose you want to integrate a new network called `SegmentorPro` into cral. You need to make a new module called **SegmentorPro** under **cral.models.semantic_segmentation** and prepare the endpoints below.
+## Build Checklist
 
 ### 1.1 SegmentorProGenerator:
-A generator based on tf.data api which takes in a ModelConfig Object and tfrecord paths, to creates groundtruths from them.
-tfrecords are basically the serialized images and their annotation in protocol buffer format.
+
+A generator based on tf.data api which takes in a **ModelConfig** Object and **tfrecord** paths, to creates groundtruth.
+
+> **tfrecords** are serialized images and annotations in protocol buffer format.
 Google highly recommends to use tfrecords along with tf.data api for best performance.
-the parser should be able to parse an example having the following fields:
+{.is-info}
+
+The parser should be able to parse an example having the following fields:
 ```
 feature={
     'image/height': tf.train.Feature(int64_list=tf.train.Int64List(value=[height])),
@@ -32,9 +34,13 @@ feature={
 }
 ```
 ### 1.2 SegmentorProConfig
-A template class which stores all model hyper parameters specific to algorithm `SegmentorPro`
-### 1.3 SegmentorPro_loss:
- the default loss function
+
+Create a template class which stores all model hyper parameters specific to algorithm `SegmentorPro`.
+
+### 1.3 SegmentorPro_loss
+
+The default loss function.
+
 ### 1.4 log_model_config_params: 
 a function which takes in an object of ModelConfig and logs it to track
 ### 1.5 create_training_model:
