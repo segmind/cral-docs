@@ -2,7 +2,7 @@
 title: Contributing a new segmentation network to CRAL
 description: Guide to contribute a new model for segmentation
 published: true
-date: 2020-09-08T08:41:22.482Z
+date: 2020-09-08T08:50:03.840Z
 tags: 
 editor: markdown
 ---
@@ -41,14 +41,20 @@ Create a template class which stores all model hyper parameters specific to algo
 
 The default loss function.
 
-### 1.4 log_model_config_params: 
-a function which takes in an object of ModelConfig and logs it to track
-### 1.5 create_training_model:
-```
+### 1.4 log_model_config_params
+
+A function which takes in an object of **ModelConfig** and logs it to Segmind Track.
+
+### 1.5 create_training_model
+
+A function which takes in 3 arguments i.e `backbone, config and weights` and creates the training model.
+
+```py
 def training_model_vgg16(config, weights):
 		from cral.common import classification_networks    
     base_model, preprocessing_function = classification_networks['vgg16']
     #construct rest of the model using base_model and config
+     
 def create_training_model(backbone, config, weights='imagenet):
 	assert isisntance(config, SegmentorProconfig)
 	if backbone == 'vgg16':
@@ -56,22 +62,31 @@ def create_training_model(backbone, config, weights='imagenet):
 	elif backbone == 'resnet50':
      return training_model_resnet50(config, weights)
 ```
-a function which takes in 3 arguments i.e `backbone, config and weights` and creates the training model.
-for each backbone supported by `SegmentorPro`, there should be a function which builds tf.keras.Model of SegmentorPro from the tf.keras.Model of the given backbone. PLease look at the example of function `training_model_vgg16`.
-NB: All backbone networks should be built from the dictionary `classification_networks` imported from `cral.common`
-### 1.6 create_inference_model:
-a function that takes in a tf.keras.Model object of the training model and converts into prediction model
-### 1.7 test checkpoint:
-A checkpoint trained on a **semantic-drone-dataset**, this will be used later in unittest.
 
-So after the above have been done we should be able to do:
+For each backbone supported by `SegmentorPro`, you need to provide a function that builds a **tf.keras.Model** for DetectorPro from the tf.keras.Model of the given backbone. Please look at the example of function `training_model_vgg16` for better understanding.
+
+> All supported backbone networks should be built from a dictionary `classification_networks` and shold be imported from `cral.common`
+{.is-warning}
+
+### 1.6 create_inference_model
+
+Create a function that takes in a **tf.keras.Model** object of the training model and make changes to convert it into a prediction model.
+
+### 1.7 test_checkpoint
+
+Save a checkpoint trained on the [semantic drone dataset](), this will be used later for unit tests.
+
+### We should now have the following imports working
 ```
 from cral.models.semantic_segmentation.SegmentorPro import SegmentorProGenerator, SegmentorProConfig, SegmentorPro_loss
 from cral.models.semantic_segmentation.SegmentorPro import log_model_config_params, create_training_model 
 from cral.models.semantic_segmentation.SegmentorPro import create_inference_model
 ```
+
 ## 2. Pipeline Usage Layout blueprint
-Note down the final endpoints in an **ipynb notebook** as to how will it be used on **Segmentation_pipeline**, right from `add_data` method to inference part which includes overlaying segmented mask on original image like [UNet](https://colab.research.google.com/github/segmind/cral-notebooks/blob/master/OD_tutorial.ipynb)
+
+Note down the final endpoints in an **ipynb notebook** as to how will it be used on **Segmentation_pipeline**, right from `add_data` method to inference part which includes overlaying segmented mask on original image like [UNet](https://colab.research.google.com/github/segmind/cral-notebooks/blob/master/unet.ipynb)
+
 ## 3. Integration
 After all the deliverables in **section-1** have been made, use them for integrating the new network into the pipeline.
 NB: all the metadata of pipeline, including **SegmentorProConfig** are stored into an asset file along with model weights and model structure in the checkpoint file 
