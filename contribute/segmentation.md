@@ -2,7 +2,7 @@
 title: Contributing a new segmentation network to CRAL
 description: Guide to contribute a new model for segmentation
 published: true
-date: 2020-09-08T08:50:03.840Z
+date: 2020-09-08T08:52:39.325Z
 tags: 
 editor: markdown
 ---
@@ -88,18 +88,27 @@ from cral.models.semantic_segmentation.SegmentorPro import create_inference_mode
 Note down the final endpoints in an **ipynb notebook** as to how will it be used on **Segmentation_pipeline**, right from `add_data` method to inference part which includes overlaying segmented mask on original image like [UNet](https://colab.research.google.com/github/segmind/cral-notebooks/blob/master/unet.ipynb)
 
 ## 3. Integration
-After all the deliverables in **section-1** have been made, use them for integrating the new network into the pipeline.
-NB: all the metadata of pipeline, including **SegmentorProConfig** are stored into an asset file along with model weights and model structure in the checkpoint file 
+
+After all the deliverables in **section 1** have been made, use them for integrating the new network into the pipeline.
+
+> All the metadata of pipeline, including **SegmentorProConfig** are stored into an asset file along with model weights and model structure in the checkpoint file.
+{.is-info}
+
 ## 4. Unit testing
-Write testcases for the network which should do the following
+
+Write testcases for the network which should do the following:
+
 - load `tf.keras.Model` instance of `SegmentorPro`
 - load weights into it via `model.load_weights()`, from the checkpoint file submitted as a deliverable in **section-1**
 - convert the model into prediction model(if required) into the **required prediction model structure as specified in section-0**.
 - predict on a set of test images from **semantic-drone-dataset** for which bboxes have already been calculated.
-After unittest have passed, merge requests should be raised, for mergeing the code into cral-dev. The ipynb notebook submitted in section 2 will be run, if it works end to end then the merge request will be accepted.
+
+After unit tests have passed, merge requests should be raised, for mergeing the code into cral-dev. The ipynb notebook submitted in section 2 will be run, if it works end to end then the merge request will be accepted.
 
 ## Prediction model structure
 
 The prediction model should have 1 output tensor as follows:
     1. `y(float32)` : shape should be (N, H, W, num_classes) where N is the batch size, H and W are the input dimensions and num_classes is the number of different segmentation classes in the dataset. 
-Input images should be of format 3-channel RGB.
+    
+> Input images should be of format 3-channel RGB.
+{.is-warning}
