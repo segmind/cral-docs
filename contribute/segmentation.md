@@ -2,19 +2,18 @@
 title: Contributing a new segmentation network to CRAL
 description: Guide to contribute a new model for segmentation
 published: true
-date: 2020-09-08T03:56:43.489Z
+date: 2020-09-08T08:38:44.633Z
 tags: 
 editor: markdown
 ---
 
-# Contributing a new Segmentation network
-## 0. Required prediction model structure
-The prediction model should have 1 output tensor as follows:
-    1. `y(float32)` : shape should be (N, H, W, num_classes) where N is the batch size, H and W are the input dimensions and num_classes is the number of different segmentation classes in the dataset. 
-Input images should be of format 3-channel RGB.
-## 1. Deliverables
-create a new branch from branch `cral-dev`.
+> Create a new branch from branch `cral-dev`. Suppose you want to integrate a new network called `SegmentorPro`, you need to make a new module called **SegmentorPro** under **cral.models.semantic_segmentation** and prepare the endpoints as shown below.
+{.is-info}
+
+## Checklist
+
 Suppose you want to integrate a new network called `SegmentorPro` into cral. You need to make a new module called **SegmentorPro** under **cral.models.semantic_segmentation** and prepare the endpoints below.
+
 ### 1.1 SegmentorProGenerator:
 A generator based on tf.data api which takes in a ModelConfig Object and tfrecord paths, to creates groundtruths from them.
 tfrecords are basically the serialized images and their annotation in protocol buffer format.
@@ -77,3 +76,9 @@ Write testcases for the network which should do the following
 - convert the model into prediction model(if required) into the **required prediction model structure as specified in section-0**.
 - predict on a set of test images from **semantic-drone-dataset** for which bboxes have already been calculated.
 After unittest have passed, merge requests should be raised, for mergeing the code into cral-dev. The ipynb notebook submitted in section 2 will be run, if it works end to end then the merge request will be accepted.
+
+## Prediction model structure
+
+The prediction model should have 1 output tensor as follows:
+    1. `y(float32)` : shape should be (N, H, W, num_classes) where N is the batch size, H and W are the input dimensions and num_classes is the number of different segmentation classes in the dataset. 
+Input images should be of format 3-channel RGB.
