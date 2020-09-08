@@ -2,7 +2,7 @@
 title: Contributing a new segmentation network to CRAL
 description: Guide to contribute a new model for segmentation
 published: true
-date: 2020-09-08T08:52:39.325Z
+date: 2020-09-08T08:53:00.091Z
 tags: 
 editor: markdown
 ---
