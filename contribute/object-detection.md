@@ -2,7 +2,7 @@
 title: Contributing a new object detection network to CRAL
 description: Guide to contribute a new model for object detection
 published: true
-date: 2020-09-08T08:39:32.516Z
+date: 2020-09-08T08:52:29.013Z
 tags: 
 editor: markdown
 ---
@@ -37,7 +37,7 @@ feature={
 
 ### 1.2 DetectorProConfig
 
-A template class which stores all the model hyper-parameters specific to your algorithm `DetectorPro`.
+Create a a template class which stores all the model hyper-parameters specific to your algorithm `DetectorPro`.
 
 ### 1.3 DetectorPro_loss
 
@@ -55,16 +55,12 @@ A function which takes in 3 arguments i.e `backbone, config and weights` and cre
 def training_model_vgg16(config, weights):
 		from cral.common import classification_networks    
     base_model, preprocessing_function = classification_networks['vgg16']
-    
     #construct rest of the model using base_model and config
     
 def create_training_model(backbone, config, weights='imagenet):
-
 	assert isisntance(config, DetectorProconfig)
-  
 	if backbone == 'vgg16':
      return training_model_vgg16(config, weights)
-
 	elif backbone == 'resnet50':
      return training_model_resnet50(config, weights)
 ```
@@ -74,10 +70,11 @@ For each backbone supported by `DetectorPro`, you need to provide a function tha
 > All supported backbone networks should be built from a dictionary `classification_networks` and shold be imported from `cral.common`
 {.is-warning}
 
-### 1.6 create_inference_model:
+### 1.6 create_inference_model
+
 Create a function that takes in a **tf.keras.Model** object of the training model and make changes to convert it into a prediction model.
 
-### 1.7 test checkpoint:
+### 1.7 test_checkpoint
 Save a checkpoint trained on the [chess-dataset](), this will be used later for unit tests.
 
 
@@ -95,21 +92,21 @@ Note down the final endpoints in an **ipynb notebook** as to how will it be used
 
 ## 3. Integration
 
-After all the deliverables in **section-1** have been made, use them for integrating the new network into the pipeline.
+After all the deliverables in **section 1** have been made, use them for integrating the new network into the pipeline.
 
-NB: all the metadata of pipeline, including **DetectorProConfig** are stored into an asset file along with model weights and model structure in the checkpoint file 
+> All the metadata of pipeline, including **DetectorProConfig** are stored into an asset file along with model weights and model structure in the checkpoint file 
+{.is-info}
 
 ## 4. Unit testing
 
-Write testcases for the network which should do the following
+Write testcases for the network which should do the following:
 
 - load `tf.keras.Model` instance of `DetectorPro`
 - load weights into it via `model.load_weights()`, from the checkpoint file submitted as a deliverable in **section-1**
 - convert the model into prediction model(if required) into the **required prediction model structure as specified in section-0**.
 - predict on a set of test images from **chess-dataset** for which bboxes have already been calculated.
 
-
-After unittest have passed, merge requests should be raised, for mergeing the code into cral-dev. The ipynb notebook submitted in section 2 will be run, if it works end to end then the merge request will be accepted.
+After unit tests have passed, merge requests should be raised, for mergeing the code into cral-dev. The ipynb notebook submitted in section 2 will be run, if it works end to end then the merge request will be accepted.
 
 ## Prediction model structure
 The prediction model should have 3 outputs tensors as follows:
@@ -117,4 +114,5 @@ The prediction model should have 3 outputs tensors as follows:
     2. `scores(float32)` : shape should be (N,)
     3. `labels(int32)` : shape should be (N,)
 
-Input images should be of format 3-channel RGB.
+> Input images should be of format 3-channel RGB.
+{.is-warning}
