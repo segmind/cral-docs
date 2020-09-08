@@ -2,7 +2,7 @@
 title: Contributing a new object detection network to CRAL
 description: Guide to contribute a new model for object detection
 published: true
-date: 2020-09-08T04:38:05.159Z
+date: 2020-09-08T04:59:52.878Z
 tags: 
 editor: markdown
 ---
