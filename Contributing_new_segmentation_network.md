@@ -1,8 +1,8 @@
 ---
-title: contribute-semanticsegmentation
-description: contributing a new algorithm to semantic segmentation
+title: Contributing a new segmentation network to CRAL
+description: Guide to contribute a new model for segmentation
 published: true
-date: 2020-09-07T13:00:42.859Z
+date: 2020-09-08T03:46:15.691Z
 tags: 
 editor: markdown
 ---
