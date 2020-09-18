@@ -49,13 +49,13 @@ cral.models.semantic_segmentation.UNetConfig(
 # [PspNet](https://arxiv.org/pdf/1612.01105.pdf)
 Instantiates the PspNet architecture. 
 
-| Backbones supported | `VGG16` `VGG19` `Resnet50` `Resnet101` `Resnet152` `Resnet50v2` `Resnet101v2` `Resnet152v2` `Mobilenet` |
+| Backbones supported | `VGG16` `VGG19` `Resnet50` `Resnet101` `Resnet152` `Resnet50v2` `Resnet101v2` `Resnet152v2` `Mobilenet` `Mobilenetv2`|
 | -- | --| 
 
 ```py
 cral.models.semantic_segmentation.PspNetConfig(
     height, 
-    width)
+    width, down_sample_factor)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
@@ -66,3 +66,57 @@ cral.models.semantic_segmentation.PspNetConfig(
 
 
 ---
+
+# [SegNet](https://arxiv.org/pdf/1511.00561.pdf)
+Instantiates the SegNet architecture. 
+
+| Backbones supported | `VGG16` `VGG19` `Resnet50` `Resnet101` `Resnet152` `Resnet50v2` `Resnet101v2` `Resnet152v2` `Mobilenet` `Mobilenetv2`|
+| -- | --| 
+
+```py
+cral.models.semantic_segmentation.SegNetConfig(
+    height, 
+    width, num_upsample_layers)
+```
+**Arguments**
+| Name                  | Type        | Default     | Description                            |
+| --- | --- | --- | --- |
+|**height**|int|576|Input shape dimension|
+|**width**|int|576|Input shape dimension|
+|**num_upsample_layers**|int|3|Number of upsample layers after the encoder part|
+
+
+---
+
+# [UnetPlusPlus](https://arxiv.org/abs/1807.10165)
+Instantiates the UnetPlusPlus architecture. 
+
+| Backbones supported | `VGG16` `VGG19` `Resnet50` `Resnet101` `Resnet152` `Resnet50v2` `Resnet101v2` `Resnet152v2` `Mobilenet` `Mobilenetv2`|
+| -- | --| 
+
+```py
+cral.models.semantic_segmentation.UnetPlusPlusConfig(
+    height, 
+    width, num_upsample_layers, filters, deep_supervision)
+```
+**Arguments**
+| Name                  | Type        | Default     | Description                            |
+| --- | --- | --- | --- |
+|**height**|int|320|Input shape dimension|
+|**width**|int|320|Input shape dimension|
+|**num_upsample_layers**|int|3|Number of upsample layers after the encoder part|
+|**filters**|list|[64,128,256,512,1024]|List of filters to use. Each filter size correspond to 1 upsample layer|
+|**deep_supervision**|bool|True|True for averaging the outputs otherwise false|
+
+
+---
+
+
+## Model source
+| Model | Source |
+| -- | -- |
+|`Deeplabv3+` |  [Github](https://github.com/bonlime/keras-deeplab-v3-plus) |
+|`UNet` |  [Github](https://github.com/divamgupta/image-segmentation-keras) |
+|`PspNet` |  [Github](https://github.com/divamgupta/image-segmentation-keras) |
+|`SegNet` |  [Github](https://github.com/divamgupta/image-segmentation-keras) |
+|`UnetPlusPlus` |  [Github](https://github.com/CarryHJR/Nested-UNet) |
