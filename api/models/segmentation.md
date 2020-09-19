@@ -2,10 +2,11 @@
 title: Segmentation Models
 description: List of Networks for Segmentation
 published: true
-date: 2020-08-25T06:00:41.928Z
+date: 2020-09-19T04:01:10.207Z
 tags: 
 editor: markdown
 ---
+
 # [Deeplabv3+](https://arxiv.org/pdf/1802.02611.pdf)
 Instantiates the Deeplabv3+ architecture. 
 
@@ -15,7 +16,8 @@ Instantiates the Deeplabv3+ architecture.
 ```py
 cral.models.semantic_segmentation.Deeplabv3Config(
     height, 
-    width, output_stride)
+    width, 
+    output_stride)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
@@ -55,7 +57,8 @@ Instantiates the PspNet architecture.
 ```py
 cral.models.semantic_segmentation.PspNetConfig(
     height, 
-    width, down_sample_factor)
+    width, 
+    down_sample_factor)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
@@ -76,7 +79,8 @@ Instantiates the SegNet architecture.
 ```py
 cral.models.semantic_segmentation.SegNetConfig(
     height, 
-    width, num_upsample_layers)
+    width, 
+    num_upsample_layers)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
@@ -88,8 +92,8 @@ cral.models.semantic_segmentation.SegNetConfig(
 
 ---
 
-# [UnetPlusPlus](https://arxiv.org/abs/1807.10165)
-Instantiates the UnetPlusPlus architecture. 
+# [Unet++](https://arxiv.org/abs/1807.10165)
+Instantiates the Unet++ architecture. 
 
 | Backbones supported | `VGG16` `VGG19` `Resnet50` `Resnet101` `Resnet152` `Resnet50v2` `Resnet101v2` `Resnet152v2` `Mobilenet` `Mobilenetv2`|
 | -- | --| 
@@ -97,7 +101,10 @@ Instantiates the UnetPlusPlus architecture.
 ```py
 cral.models.semantic_segmentation.UnetPlusPlusConfig(
     height, 
-    width, num_upsample_layers, filters, deep_supervision)
+    width, 
+    num_upsample_layers, 
+    filters, 
+    deep_supervision)
 ```
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
@@ -114,7 +121,7 @@ cral.models.semantic_segmentation.UnetPlusPlusConfig(
 
 ## Model source
 | Model | Source |
-| -- | -- |
+|---|---|
 |`Deeplabv3+` |  [Github](https://github.com/bonlime/keras-deeplab-v3-plus) |
 |`UNet` |  [Github](https://github.com/divamgupta/image-segmentation-keras) |
 |`PspNet` |  [Github](https://github.com/divamgupta/image-segmentation-keras) |
