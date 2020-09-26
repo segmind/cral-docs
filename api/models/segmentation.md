@@ -118,6 +118,26 @@ cral.models.semantic_segmentation.UnetPlusPlusConfig(
 
 ---
 
+# [FpnNet](https://openaccess.thecvf.com/content_cvpr_2018_workshops/papers/w4/Seferbekov_Feature_Pyramid_Network_CVPR_2018_paper.pdf)
+Instantiates the FpnNet architecture. 
+
+| Backbones supported | `VGG16` `VGG19` `Resnet50` `Resnet101` `Resnet152` `Resnet50v2` `Resnet101v2` `Resnet152v2` `Mobilenet` `Mobilenetv2`|
+| -- | --| 
+
+```py
+cral.models.semantic_segmentation.FpnNetConfig(
+    height, 
+    width)
+```
+**Arguments**
+| Name                  | Type        | Default     | Description                            |
+| --- | --- | --- | --- |
+|**height**|int|320|Input shape dimension|
+|**width**|int|320|Input shape dimension|
+
+
+---
+
 
 ## Model source
 | Model | Source |
@@ -127,3 +147,8 @@ cral.models.semantic_segmentation.UnetPlusPlusConfig(
 |`PspNet` |  [Github](https://github.com/divamgupta/image-segmentation-keras) |
 |`SegNet` |  [Github](https://github.com/divamgupta/image-segmentation-keras) |
 |`UnetPlusPlus` |  [Github](https://github.com/CarryHJR/Nested-UNet) |
+|`FpnNet` |  [Github](https://github.com/qubvel/segmentation_models) |
+
+
+
+
