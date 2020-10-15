@@ -2,7 +2,7 @@
 title: Contribute
 description: How to contribute to CRAL
 published: true
-date: 2020-10-15T10:44:49.992Z
+date: 2020-10-15T11:02:58.723Z
 tags: 
 editor: markdown
 dateCreated: 2020-08-10T20:33:00.375Z
@@ -21,3 +21,12 @@ dateCreated: 2020-08-10T20:33:00.375Z
 - [Contributing a new object detection network to CRAL](/contribute/object-detection)
 - [Contributing a new segmentation network to CRAL](/contribute/segmentation)
 {.links-list}
+
+## Architecture
+
+|---|---|
+|**cral.models**|`cral.models.object_detection` `cral.models.semantic_segmentation` `cral.models.classification` `cral.models.instance_segmentation` |
+|**cral.data**| |
+|**cral.metrics**|`cral.object_detection.coco_iou` `cral.seg.sparse_mean_iou`|
+|**cral.post_processing**|`cral.post_processing.object_detection.soft_nms` `cral.post_processing.display.object_detection`|
+|**cral.pipeline**||
