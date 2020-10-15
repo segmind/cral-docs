@@ -2,7 +2,7 @@
 title: Contribute
 description: How to contribute to CRAL
 published: true
-date: 2020-10-15T10:43:48.614Z
+date: 2020-10-15T10:44:49.992Z
 tags: 
 editor: markdown
 dateCreated: 2020-08-10T20:33:00.375Z
