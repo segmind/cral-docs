@@ -2,7 +2,7 @@
 title: CNN Research Abstraction Library
 description: Build better computer vision models faster with less code.
 published: true
-date: 2020-10-15T10:56:28.299Z
+date: 2020-11-10T03:36:40.620Z
 tags: 
 editor: markdown
 dateCreated: 2020-06-03T09:46:23.515Z
