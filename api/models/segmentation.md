@@ -2,9 +2,10 @@
 title: Segmentation Models
 description: List of Networks for Segmentation
 published: true
-date: 2020-09-19T04:01:10.207Z
+date: 2020-11-23T08:56:42.714Z
 tags: 
 editor: markdown
+dateCreated: 2020-08-24T05:29:52.271Z
 ---
 
 # [Deeplabv3+](https://arxiv.org/pdf/1802.02611.pdf)
@@ -138,6 +139,26 @@ cral.models.semantic_segmentation.FpnNetConfig(
 
 ---
 
+# [LinkNet](https://arxiv.org/pdf/1612.01105.pdf)
+Instantiates the LinkNet architecture. 
+
+| Backbones supported | `Resnet50` `Resnet101` `Resnet152` `Resnet50v2` `Resnet101v2` `Resnet152v2` `Mobilenet` `Mobilenetv2`|
+| -- | --| 
+
+```py
+cral.models.semantic_segmentation.LinkNetConfig(
+    height, 
+    width)
+```
+**Arguments**
+| Name                  | Type        | Default     | Description                            |
+| --- | --- | --- | --- |
+|**height**|int|320|Input shape dimension|
+|**width**|int|320|Input shape dimension|
+
+
+---
+
 
 ## Model source
 | Model | Source |
@@ -148,6 +169,7 @@ cral.models.semantic_segmentation.FpnNetConfig(
 |`SegNet` |  [Github](https://github.com/divamgupta/image-segmentation-keras) |
 |`UnetPlusPlus` |  [Github](https://github.com/CarryHJR/Nested-UNet) |
 |`FpnNet` |  [Github](https://github.com/qubvel/segmentation_models) |
+|`LinkNet` |  [Github](https://github.com/qubvel/segmentation_models) |
 
 
 
