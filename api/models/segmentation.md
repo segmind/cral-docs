@@ -2,7 +2,7 @@
 title: Segmentation Models
 description: List of Networks for Segmentation
 published: true
-date: 2020-11-23T08:58:14.025Z
+date: 2020-11-23T09:01:10.845Z
 tags: 
 editor: markdown
 dateCreated: 2020-08-24T05:29:52.271Z
@@ -142,7 +142,7 @@ cral.models.semantic_segmentation.FpnNetConfig(
 # [LinkNet](https://arxiv.org/pdf/1707.03718.pdf)
 Instantiates the LinkNet architecture. 
 
-| Backbones supported | `Resnet50` `Resnet101` `Resnet152` `Resnet50v2` `Resnet101v2` `Resnet152v2` `Mobilenet` `Mobilenetv2`|
+| Backbones supported | `Resnet50` `Resnet101` `Resnet152` `Resnet50v2` `Resnet101v2` `Resnet152v2` `Mobilenet`|
 | -- | --| 
 
 ```py
