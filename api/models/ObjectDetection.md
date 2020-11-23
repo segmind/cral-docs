@@ -2,7 +2,7 @@
 title: Object Detection Models
 description: List of Networks for Object Detection
 published: true
-date: 2020-11-23T07:39:36.248Z
+date: 2020-11-23T07:46:12.487Z
 tags: 
 editor: markdown
 dateCreated: 2020-07-12T15:26:21.530Z
@@ -78,8 +78,8 @@ cral.models.object_detection.FasterRCNNConfig(
 **Arguments**
 | Name                  | Type        | Default     | Description                            |
 | --- | --- | --- | --- |
-|**height**|list|1024|All Images will be resized to this size before being fed into the model|
-|**width**|list|1024|All Images will be resized to this size before being fed into the model|
+|**height**|list|-|Input Image dimension|
+|**width**|list|-|All Images will be resized to this size before being fed into the model|
 
 
 ---
