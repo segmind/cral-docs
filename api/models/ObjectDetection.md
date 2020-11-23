@@ -2,9 +2,10 @@
 title: Object Detection Models
 description: List of Networks for Object Detection
 published: true
-date: 2020-08-12T09:27:06.428Z
+date: 2020-11-23T07:39:36.248Z
 tags: 
 editor: markdown
+dateCreated: 2020-07-12T15:26:21.530Z
 ---
 
 # [RetinaNet](https://arxiv.org/abs/1708.02002)
@@ -60,5 +61,25 @@ cral.models.object_detection.YoloV3Config(
 |**max_boxes**|int|100|Max number of objects that can be present in the images|
 |**iou_threshold**|float|0.5|Any bboxes with iou greater thanthreshold will be merged by NMS|
 |**score_threshold**|float|0.5| Any prediction with lower score will be ignored in NMS|
+
+---
+
+# [FasterRCNN](https://arxiv.org/pdf/1506.01497.pdf)
+Instantiates the FasterRCNN architecture. 
+
+| Backbones supported | `ResNet50` `ResNet101`  |
+| -- | --| 
+
+```py
+cral.models.object_detection.FasterRCNNConfig(
+    height, 
+    width)
+```
+**Arguments**
+| Name                  | Type        | Default     | Description                            |
+| --- | --- | --- | --- |
+|**height**|list|1024|All Images will be resized to this size before being fed into the model|
+|**width**|list|1024|All Images will be resized to this size before being fed into the model|
+
 
 ---
