@@ -2,7 +2,7 @@
 title: Instance Segmentation Pipeline
 description: 
 published: true
-date: 2020-11-24T07:33:02.459Z
+date: 2020-11-24T07:34:00.988Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-24T07:32:33.613Z
@@ -25,7 +25,7 @@ pipeline.add_data(*args, **kwargs)
 |---|---|---|---|
 |**train_images_dir**| str |.|path to training images|
 |**train_anno_dir**| str |.|path to training annotations|
-|**annotation_format**|str|.|`grayscale`
+|**annotation_format**|str|.|`coco`
 |**val_images_dir**| str |.|path to validation images|
 |**val_anno_dir**| str |.|path to validation annotation|
 |**names_file**| str |.| (*optional*) Path to names file for YOLO format|
