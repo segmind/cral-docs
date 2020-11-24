@@ -2,7 +2,7 @@
 title: Instance Segmentation Pipeline
 description: 
 published: true
-date: 2020-11-24T07:34:00.988Z
+date: 2020-11-24T07:35:26.225Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-24T07:32:33.613Z
