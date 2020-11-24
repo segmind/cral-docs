@@ -2,7 +2,7 @@
 title: Instance Segmentation Pipeline
 description: 
 published: true
-date: 2020-11-24T07:35:26.225Z
+date: 2020-11-24T07:39:06.724Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-24T07:32:33.613Z
@@ -51,7 +51,7 @@ pipeline.set_algo(*args, **kwargs)
 | Name                  | Type        | Default     | Description                            |
 |---|---|---|---|
 |**feature_extractor**| str |.|Name of the backbone for instance segmentation|
-|**config**| Config |.|[Config](https://cral.segmind.com/api/models/segmentation) object of the Segmentation Model|
+|**config**| Config |.|[Config](https://cral.segmind.com/api/models/InstanceSegmentation) object of the Segmentation Model|
 |**weights**|string|`imagenet`|One of `None`,`imagenet` or the path to the weights file|
 |**base_trainable**| bool|False|(*optional*) If set False the base models layers will not be trainable useful fortransfer learning|
 |**preprocessing_fn**| Function|None| (*optional*) needs to to be set if a in built model is not being used|
