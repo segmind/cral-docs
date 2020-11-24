@@ -2,14 +2,14 @@
 title: Instance Segmentation Models
 description: List of Networks for Instance Segmentation
 published: true
-date: 2020-11-24T07:26:10.749Z
+date: 2020-11-24T07:27:11.983Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-24T07:22:16.978Z
 ---
 
 # [MaskRCNN](https://arxiv.org/pdf/1703.06870.pdf)
-Instantiates the Deeplabv3+ architecture. 
+Instantiates the MaskRCNN architecture. 
 
 | Backbones supported | `Resnet50` `Resnet101` |
 | -- | --| 
