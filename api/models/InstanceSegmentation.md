@@ -1,8 +1,8 @@
 ---
-title: Untitled Page
+title: Instance Segmentation Models
 description: 
 published: true
-date: 2020-11-24T07:23:10.624Z
+date: 2020-11-24T07:25:08.525Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-24T07:22:16.978Z
