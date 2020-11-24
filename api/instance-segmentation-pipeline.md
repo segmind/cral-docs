@@ -2,7 +2,7 @@
 title: Instance Segmentation Pipeline
 description: 
 published: true
-date: 2020-11-24T07:32:33.613Z
+date: 2020-11-24T07:33:02.459Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-24T07:32:33.613Z
@@ -16,8 +16,8 @@ Cral end to end pipeline for Instance Segmentation task
 Parses dataset once for generating metadata and versions the data.
 
 ```py
-from cral.pipeline.semantic_segmentation_pipeline import InstanceSegPipe
-pipeline=InstaneSegPipe()
+from cral.pipeline.instance_segmentation_pipeline import InstanceSegPipe
+pipeline=InstanceSegPipe()
 pipeline.add_data(*args, **kwargs)
 ```
 **Arguments**
