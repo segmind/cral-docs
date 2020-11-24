@@ -2,13 +2,13 @@
 title: Untitled Page
 description: 
 published: true
-date: 2020-11-24T07:22:16.978Z
+date: 2020-11-24T07:23:10.624Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-24T07:22:16.978Z
 ---
 
-# [MaskRCNN](https://arxiv.org/pdf/1802.02611.pdf)
+# [MaskRCNN](https://arxiv.org/pdf/1703.06870.pdf)
 Instantiates the Deeplabv3+ architecture. 
 
 | Backbones supported | `Resnet50` `Resnet101` |
