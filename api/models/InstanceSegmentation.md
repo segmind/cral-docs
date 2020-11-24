@@ -1,8 +1,8 @@
 ---
 title: Instance Segmentation Models
-description: 
+description: List of Networks for Instance Segmentation
 published: true
-date: 2020-11-24T07:25:08.525Z
+date: 2020-11-24T07:26:10.749Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-24T07:22:16.978Z
