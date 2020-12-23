@@ -2,7 +2,7 @@
 title: CNN Research Abstraction Library
 description: Build better computer vision models faster with less code.
 published: true
-date: 2020-12-23T08:30:15.123Z
+date: 2020-12-23T08:30:49.360Z
 tags: 
 editor: markdown
 dateCreated: 2020-06-03T09:46:23.515Z
@@ -22,13 +22,13 @@ Our aim is also to make it easier to reproduce and extend the results of various
 
 ## Organizations using and contributing to CRAL
 <br />
-<img src="https://segmind.com/assets/images/segmind-logo.png" height="30" style="margin-right:20px;" />
+<img src="https://segmind.com/assets/images/segmind-logo.png" height="30" style="float: left;margin-right:20px;" />
 
-<img src="https://d5a9y5rnan99s.cloudfront.net/images/logo/logo-with-name-typeset.2306a49e16a9.svg" height="30" style="margin-right:20px;" />
+<img src="https://d5a9y5rnan99s.cloudfront.net/images/logo/logo-with-name-typeset.2306a49e16a9.svg" height="30" style="float: left;margin-right:20px;" />
 
-<img src="https://www.iiit.ac.in/img/iiit-new.png" height="60" style="margin-right:20px;" />
+<img src="https://www.iiit.ac.in/img/iiit-new.png" height="60" style="float: left;margin-right:20px;" />
 
-<img src="/cmu-2.png" height="60" style="margin-right:20px;" />
+<img src="/cmu-2.png" height="60" style="float: left;margin-right:20px;" />
 
 
 ## Components
